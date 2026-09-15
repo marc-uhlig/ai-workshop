@@ -19,6 +19,7 @@
     in {
       devShells.default = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
+          go-task
           markdownlint-cli2
           reveal-md
         ];
