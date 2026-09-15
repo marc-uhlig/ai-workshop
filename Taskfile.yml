@@ -1,0 +1,12 @@
+version: "3"
+
+tasks:
+  slides:
+    desc: "Watch slides"
+    dir: "slides"
+    cmds:
+      - "reveal-md slides.md --watch"
+  lint:
+    desc: "Lint files"
+    cmds:
+      - "markdownlint-cli2 *.md"
