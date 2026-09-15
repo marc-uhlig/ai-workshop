@@ -12,10 +12,6 @@
   }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
-      go-version = pkgs.writeShellScript "go-version" ''
-        set -euo pipefail
-        go version | sed 's/go version go\([^ ]*\).*/\1/'
-      '';
     in {
       devShells.default = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
