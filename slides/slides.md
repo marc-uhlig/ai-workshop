@@ -17,16 +17,16 @@ subtitle
 
 ## Agenda
 
-1. AI Prinzipien - 10 min - @mira
-2. Tools vorstellen - 15 min - @mira
-3. Tools installieren - 30 min
+1. AI Prinzipien - 15 min - @mira
+2. Tools vorstellen - 10 min - @mira
+3. Tools installieren - 30 min - ✅
 4. Grundlagen eines MVPs - 20 min - @daw
 
 Pause
 
 5. Vorstellen Beispiel MVP - 5 min
-6. Umsetzung eines Beispiel-MVPs - 1:00h
-7. Fragen - 10 min
+6. Umsetzung eines Beispiel-MVPs - 1:00h - @mira/@daw
+7. Fragen - 10 min - ✅
 
 ---
 
@@ -62,6 +62,13 @@ Pause
 
 - investigate how to generate images programatically
 
+- Claude Desktop @mira
+  - Tools installieren
+- ChatGPT Desktop @daw
+  - Tools installieren
+
+- MVP umsetzen beispielhaft
+
 ---
 
 #### Image Generation
@@ -70,6 +77,20 @@ Pause
 - vielleicht ist das auch ein Learning
   - -> hängt euch nicht auf an den Bildern
   - diese kann man später noch ergänzen
+
+---
+
+### MVP Features
+
+1. Kudos-Card generieren
+  - Text eingeben, 1 Theme, 4 Templates, Bild anzeigen
+  - Bild herunterladen
+  - Bild in in Zwischenablage speichern
+2. Unterstützung mehrerer Themes
+  - mindestens zwei Themes mit je 4 Templates
+3. Ascii-Theme (optional)
+  - erstelle Kudos-Card nur mit Ascii-Zeichen
+  - button zum in die Zwischenablage kopieren
 
 ---
 
@@ -194,6 +215,18 @@ Wie funktioniert das, was wir täglich benutzen?
 ---
 
 ## 2. Tools vorstellen
+
+### Welches Model für welchen Skill
+
+- explore/propose: high effort
+  - Codex: Sol/Terra
+  - Claude: Opus high
+- apply: medium effort
+  - Codex: Terra
+  - Claude: Sonnet medium
+- archive: medium effort
+  - Codex: Terra
+  - Claude: Sonnet medium
 
 ---
 
@@ -485,3 +518,5 @@ Nicht-Ziele sind nicht für jedes MVP der Welt zwingend. Für diesen eintägigen
 ---
 
 ## 7. Fragen
+
+
