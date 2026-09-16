@@ -47,6 +47,241 @@
   height: 10px;
 }
 
+/* ── MVP section ── */
+.reveal section:has(.mvp-compare, .mvp-acronym, .mvp-formula, .mvp-scope-visual, .mvp-decisions, .mvp-done, .mvp-contract) {
+  font-size: 26px;
+}
+
+.reveal section:has(.mvp-section-title) {
+  font-size: 30px;
+}
+
+.reveal section:has(.mvp-section-title) h2 {
+  font-size: 1.75em;
+}
+
+.reveal .mvp-section-title {
+  margin-top: 2rem;
+  color: #555;
+  font-size: 0.85em;
+  line-height: 1.35;
+}
+
+.reveal .mvp-compare,
+.reveal .mvp-decisions,
+.reveal .mvp-acronym {
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.reveal .mvp-compare > div {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: #f3f3f3;
+  color: #222;
+  text-align: left;
+  border-left: 0.3rem solid #A90936;
+}
+
+.reveal .mvp-compare .mvp-muted,
+.reveal .mvp-compare .mvp-success {
+  color: #222;
+}
+
+.reveal .mvp-success,
+.reveal .mvp-slice-good em {
+  color: #26734d;
+  font-weight: 700;
+}
+
+.reveal .mvp-acronym > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reveal .mvp-acronym strong {
+  color: #A90936;
+  font-size: 4em;
+  line-height: 1;
+}
+
+.reveal .mvp-acronym span {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.reveal .mvp-acronym small {
+  margin-top: 0.5rem;
+  color: #222;
+  font-size: 0.9em;
+}
+
+.reveal .mvp-formula {
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  max-width: 80%;
+  background: #f3f3f3;
+  border-left: 0.4rem solid #A90936;
+  text-align: left;
+  font-size: 1.05em;
+  line-height: 1.35;
+}
+
+.reveal .mvp-formula small {
+  color: #A90936;
+  font-weight: 700;
+}
+
+.reveal .mvp-formula p {
+  margin: 0.5rem 0 0;
+}
+
+.reveal .mvp-formula + h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 0.95em;
+}
+
+.reveal .mvp-scope-visual {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2rem 0;
+}
+
+.reveal .mvp-scope-option {
+  width: 35%;
+  min-height: 11rem;
+  padding: 1rem 1.25rem;
+  background: #f3f3f3;
+  border-left: 0.3rem solid #A90936;
+  text-align: left;
+}
+
+.reveal .mvp-scope-option h3 {
+  margin: 0 0 0.8rem;
+}
+
+.reveal .mvp-layer-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.reveal .mvp-layer-stack span {
+  width: 72%;
+  padding: 0.25rem 0.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.reveal .mvp-layer-stack span:nth-child(2) {
+  width: 55%;
+}
+
+.reveal .mvp-layer-stack span:nth-child(3) {
+  width: 38%;
+}
+
+.reveal .mvp-journey-line {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.reveal .mvp-journey-line span {
+  padding: 0.5rem 0.7rem;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.reveal .mvp-scope-option p {
+  margin-top: 1rem;
+  font-size: 0.72em;
+}
+
+.reveal .mvp-scope-option-good p {
+  color: #A90936;
+  font-weight: 700;
+}
+
+.reveal .mvp-scope-arrow {
+  color: #A90936;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.reveal section:has(.mvp-scope-visual) h2,
+.reveal section:has(.mvp-decisions) h2 {
+  font-size: 1.45em;
+}
+
+.reveal .mvp-decisions > div {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  background: #f3f3f3;
+  text-align: left;
+  border-left: 0.3rem solid #A90936;
+}
+
+.reveal .mvp-decisions {
+  gap: 1.5rem;
+  margin: 1.25rem 0;
+}
+
+.reveal .mvp-decisions h3 {
+  margin: 0.35rem 0;
+}
+
+.reveal .mvp-decisions p {
+  font-size: 0.78em;
+  line-height: 1.4;
+}
+
+.reveal section:has(.mvp-decisions) blockquote {
+  margin: 0.75rem auto;
+  font-size: 0.72em;
+}
+
+.reveal .mvp-done {
+  width: 82%;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.reveal .mvp-done p {
+  margin: 0.65rem 0;
+  font-size: 0.88em;
+}
+
+.reveal .mvp-not-done {
+  color: #777;
+  font-size: 0.75em;
+}
+
+.reveal .mvp-contract {
+  width: 82%;
+  margin: 0.8rem auto;
+  text-align: left;
+  font-size: 0.76em;
+  line-height: 1.25;
+}
+
+.reveal .mvp-contract li {
+  margin-bottom: 0.3rem;
+}
+
+.reveal section:has(.mvp-contract) blockquote {
+  margin: 0.75rem auto;
+  font-size: 0.7em;
+}
+
 /* ── Laser pointer (toggle with "q") ── */
 .laser-pointer {
   position: fixed;
