@@ -176,9 +176,9 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ### MCP – Model Context Protocol
 
-- Standard, um Werkzeuge/Daten von externen Servern bereitzustellen
-- Host (Harness) ↔ Client ↔ Server
-- Ein Server für viele Harnesses – "USB-C für Tools"
+- Standard, um externe Werkzeuge/Daten anzubinden
+- Ein Server funktioniert in jedem Harness (Claude Code, Desktop, ...)
+- "USB-C für Tools": einmal bauen, überall einstecken
 
 ---
 
