@@ -62,6 +62,15 @@ Pause
 
 - investigate how to generate images programatically
 
+---
+
+#### Image Generation
+
+- Claude Code & Codex können beide SVG's generieren -> gut genug für MVP
+- vielleicht ist das auch ein Learning
+  - -> hängt euch nicht auf an den Bildern
+  - diese kann man später noch ergänzen
+
 
 ---
 
