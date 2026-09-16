@@ -37,7 +37,7 @@
 
 ## 6. Final Verification & Polish
 
-- [ ] 6.1 Run `vp lint` and `vp fmt --check` across the full codebase and verify zero errors
-- [ ] 6.2 Run a production build (`pnpm build` / `vp build`) and verify it completes without errors
-- [ ] 6.3 Do a manual walkthrough covering all 4 templates, text edit + reset, download, and clipboard copy, and verify each matches its spec scenario in `specs/`
-- [ ] 6.4 Update the `flake.nix` devShell banner's "App:" line (currently "TODO") to describe the actual dev command, and verify the banner prints correctly on `nix develop`
+- [x] 6.1 Run `vp lint` and `vp fmt --check` across the full codebase and verify zero errors
+- [x] 6.2 Run a production build (`pnpm build` / `vp build`) and verify it completes without errors
+- [x] 6.3 Do a manual walkthrough covering all 4 templates, text edit + reset, download, and clipboard copy, and verify each matches its spec scenario in `specs/`
+- [x] 6.4 Update the `flake.nix` devShell banner's "App:" line (currently "TODO") to describe the actual dev command, and verify the banner prints correctly on `nix develop`

@@ -44,7 +44,7 @@
 
           printf "$yellow Playwright $reset\n"
           printf "  $bold Browsers:             $reset ${browserVersion}\n"
-          printf "  $bold App:                  $reset TODO\n"
+          printf "  $bold App:                  $reset pnpm dev (http://localhost:3000)\n"
 
           unset red green yellow bold reset
         '';
