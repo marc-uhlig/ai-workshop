@@ -1,11 +1,11 @@
 ## 1. Project Scaffolding & Toolchain
 
-- [ ] 1.1 Scaffold the TanStack Start (React) app in `mvp/mira/` via the current CLI (`create-start-app` / `@tanstack/cli create`) and verify `package.json`, `vite.config.ts`, and the app's route structure exist
-- [ ] 1.2 Install pnpm dependencies and verify `pnpm install` completes without errors inside the Nix devShell
-- [ ] 1.3 Adopt the Vite+ (`vp`) toolchain on top of the pnpm lockfile, configure oxlint (`.oxlintrc.json`) and oxfmt, and verify `vp lint` and `vp fmt --check` both run successfully (even if flagging pre-existing scaffold issues to fix)
-- [ ] 1.4 Configure Tailwind CSS + shadcn/ui in the app and verify a sample component renders with Tailwind utility classes applied in the browser
-- [ ] 1.5 Update `flake.nix` to add a pinned nixpkgs `nodejs` to the devShell and verify `nix develop` succeeds with `node -v` and `pnpm -v` resolving to the Nix-provided binaries
-- [ ] 1.6 Run `vp env off` so Vite+ does not manage its own Node.js runtime, and verify `vp env current` reports the Nix-provided Node instead of a Vite+-managed one
+- [x] 1.1 Scaffold the TanStack Start (React) app in `mvp/mira/` via the current CLI (`create-start-app` / `@tanstack/cli create`) and verify `package.json`, `vite.config.ts`, and the app's route structure exist
+- [x] 1.2 Install pnpm dependencies and verify `pnpm install` completes without errors inside the Nix devShell
+- [x] 1.3 Adopt the Vite+ (`vp`) toolchain on top of the pnpm lockfile, configure oxlint (`.oxlintrc.json`) and oxfmt, and verify `vp lint` and `vp fmt --check` both run successfully (even if flagging pre-existing scaffold issues to fix)
+- [x] 1.4 Configure Tailwind CSS + shadcn/ui in the app and verify a sample component renders with Tailwind utility classes applied in the browser
+- [x] 1.5 Update `flake.nix` to add a pinned nixpkgs `nodejs` to the devShell and verify `nix develop` succeeds with `node -v` and `pnpm -v` resolving to the Nix-provided binaries
+- [x] 1.6 Run `vp env off` so Vite+ does not manage its own Node.js runtime, and verify `vp env current` reports the Nix-provided Node instead of a Vite+-managed one
 
 ## 2. Kudos Card Catalog
 

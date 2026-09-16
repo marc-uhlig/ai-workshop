@@ -24,6 +24,7 @@
         nativeBuildInputs = with pkgs; [
           gnused
           jq
+          nodejs_24
           pnpm
           python3
         ];
