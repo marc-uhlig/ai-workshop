@@ -15,11 +15,11 @@
 
 ## 3. Kudos Card Composer
 
-- [ ] 3.1 Build the template selection UI listing all 4 Star Wars templates with their background thumbnails, and verify all 4 are visible and selectable in the browser
-- [ ] 3.2 Build the live preview that renders the selected template's background with its text overlaid, and verify selecting each of the 4 templates shows that template's correct background/preset pairing
-- [ ] 3.3 Add an editable text field wired to the preview, and verify typing in the field updates the preview in real time
-- [ ] 3.4 Add a "reset to template" action, and verify that after editing the text, triggering reset restores the selected template's exact original preset text
-- [ ] 3.5 Ensure switching templates reloads that template's own background and preset text, and verify that editing template A's text then selecting template B shows B's original preset (not A's edits)
+- [x] 3.1 Build the template selection UI listing all 4 Star Wars templates with their background thumbnails, and verify all 4 are visible and selectable in the browser
+- [x] 3.2 Build the live preview that renders the selected template's background with its text overlaid, and verify selecting each of the 4 templates shows that template's correct background/preset pairing
+- [x] 3.3 Add an editable text field wired to the preview, and verify typing in the field updates the preview in real time
+- [x] 3.4 Add a "reset to template" action, and verify that after editing the text, triggering reset restores the selected template's exact original preset text
+- [x] 3.5 Ensure switching templates reloads that template's own background and preset text, and verify that editing template A's text then selecting template B shows B's original preset (not A's edits)
 
 ## 4. Kudos Card Export
 
