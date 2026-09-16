@@ -9,9 +9,9 @@
 
 ## 2. Kudos Card Catalog
 
-- [ ] 2.1 Generate 4 distinct Star Wars-themed SVG background images as static assets and verify all 4 files exist and render correctly when opened directly in a browser
-- [ ] 2.2 Implement the theme/template registry data module (`theme -> templates[]`, each template pairing one background with one preset text) and verify the Star Wars theme exposes exactly 4 templates with distinct preset texts
-- [ ] 2.3 Structure the registry so a second theme can be added as a new data entry, and verify (via a short script or type-level check) that no UI component references the Star Wars theme by name directly
+- [x] 2.1 Generate 4 distinct Star Wars-themed SVG background images as static assets and verify all 4 files exist and render correctly when opened directly in a browser
+- [x] 2.2 Implement the theme/template registry data module (`theme -> templates[]`, each template pairing one background with one preset text) and verify the Star Wars theme exposes exactly 4 templates with distinct preset texts
+- [x] 2.3 Structure the registry so a second theme can be added as a new data entry, and verify (via a short script or type-level check) that no UI component references the Star Wars theme by name directly
 
 ## 3. Kudos Card Composer
 

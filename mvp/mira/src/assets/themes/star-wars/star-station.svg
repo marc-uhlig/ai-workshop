@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="ss-bg" cx="30%" cy="35%" r="85%">
+      <stop offset="0%" stop-color="#151a35" />
+      <stop offset="55%" stop-color="#0a0d20" />
+      <stop offset="100%" stop-color="#020208" />
+    </radialGradient>
+    <linearGradient id="ss-shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b93a6" />
+      <stop offset="55%" stop-color="#525a70" />
+      <stop offset="100%" stop-color="#2a2f40" />
+    </linearGradient>
+    <linearGradient id="ss-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020208" stop-opacity="0" />
+      <stop offset="100%" stop-color="#020208" stop-opacity="0.88" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ss-bg)" />
+
+  <g fill="#ffffff">
+    <circle cx="120" cy="90" r="1.6" opacity="0.85" />
+    <circle cx="220" cy="220" r="1.2" opacity="0.6" />
+    <circle cx="80" cy="340" r="1.8" opacity="0.75" />
+    <circle cx="300" cy="120" r="1.3" opacity="0.6" />
+    <circle cx="180" cy="480" r="1.4" opacity="0.55" />
+    <circle cx="420" cy="70" r="1.1" opacity="0.5" />
+    <circle cx="60" cy="200" r="1.5" opacity="0.65" />
+    <circle cx="340" cy="400" r="1.2" opacity="0.5" />
+    <circle cx="500" cy="560" r="1.6" opacity="0.6" />
+    <circle cx="140" cy="580" r="1.3" opacity="0.55" />
+    <circle cx="40" cy="450" r="1.2" opacity="0.5" />
+  </g>
+
+  <g transform="translate(840,180)">
+    <circle r="230" fill="url(#ss-shell)" />
+    <circle r="230" fill="none" stroke="#1c202c" stroke-width="3" opacity="0.4" />
+    <path d="M -230 -18 A 230 230 0 0 1 40 -226" fill="none" stroke="#1c202c" stroke-width="4" opacity="0.5" />
+    <circle cx="-95" cy="-60" r="34" fill="#3a3f52" stroke="#181c26" stroke-width="3" />
+    <circle cx="-95" cy="-60" r="14" fill="#20222c" />
+    <circle cx="70" cy="120" r="12" fill="#23273a" opacity="0.7" />
+    <circle cx="-150" cy="90" r="8" fill="#23273a" opacity="0.6" />
+    <circle r="238" fill="none" stroke="#aeb6c8" stroke-width="1.5" opacity="0.25" />
+  </g>
+
+  <rect width="1200" height="630" fill="url(#ss-fade)" />
+</svg>
