@@ -23,11 +23,11 @@
 
 ## 4. Kudos Card Export
 
-- [ ] 4.1 Implement canvas-based rasterization of the composed card (background + current text) to a PNG blob, and verify a triggered export produces a non-empty, correctly-sized PNG
-- [ ] 4.2 Implement the download action (object URL + `<a download>`) using that PNG blob, and verify triggering it saves an image file to the local filesystem
-- [ ] 4.3 Implement the clipboard-copy action via `navigator.clipboard.write` with a `ClipboardItem`, and verify triggering it places a pasteable PNG image on the system clipboard
-- [ ] 4.4 Add feature detection and a visible error message for when clipboard copy fails or is unsupported, and verify the message appears when the clipboard call is forced to fail
-- [ ] 4.5 Verify manually that both the downloaded file and the clipboard image reflect the currently edited text, not just the template's original preset
+- [x] 4.1 Implement canvas-based rasterization of the composed card (background + current text) to a PNG blob, and verify a triggered export produces a non-empty, correctly-sized PNG
+- [x] 4.2 Implement the download action (object URL + `<a download>`) using that PNG blob, and verify triggering it saves an image file to the local filesystem
+- [x] 4.3 Implement the clipboard-copy action via `navigator.clipboard.write` with a `ClipboardItem`, and verify triggering it places a pasteable PNG image on the system clipboard
+- [x] 4.4 Add feature detection and a visible error message for when clipboard copy fails or is unsupported, and verify the message appears when the clipboard call is forced to fail
+- [x] 4.5 Verify manually that both the downloaded file and the clipboard image reflect the currently edited text, not just the template's original preset
 
 ## 5. Playwright E2E Suite
 
