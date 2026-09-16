@@ -17,6 +17,7 @@
       playwrightEnv = ''
         export PLAYWRIGHT_BROWSERS_PATH=${unstable.playwright.browsers}
         export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true
+        export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
       '';
       browserVersion = unstable.playwright.version;
     in {

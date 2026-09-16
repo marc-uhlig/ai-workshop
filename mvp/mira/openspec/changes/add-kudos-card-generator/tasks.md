@@ -31,9 +31,9 @@
 
 ## 5. Playwright E2E Suite
 
-- [ ] 5.1 Add Playwright as a dev dependency and create `playwright.config.ts` using the `PLAYWRIGHT_BROWSERS_PATH` already exported by `flake.nix`'s devShell, and verify `pnpm exec playwright test --list` runs without error inside `nix develop`
-- [ ] 5.2 Write the happy-path e2e test (load app → select a template → edit text → preview reflects the edit → trigger download → a downloaded file is produced) and verify it passes locally via `nix develop -c pnpm exec playwright test`
-- [ ] 5.3 Add a `test:e2e` script to `package.json` and verify it runs the suite successfully
+- [x] 5.1 Add Playwright as a dev dependency and create `playwright.config.ts` using the `PLAYWRIGHT_BROWSERS_PATH` already exported by `flake.nix`'s devShell, and verify `pnpm exec playwright test --list` runs without error inside `nix develop`
+- [x] 5.2 Write the happy-path e2e test (load app → select a template → edit text → preview reflects the edit → trigger download → a downloaded file is produced) and verify it passes locally via `nix develop -c pnpm exec playwright test`
+- [x] 5.3 Add a `test:e2e` script to `package.json` and verify it runs the suite successfully
 
 ## 6. Final Verification & Polish
 
