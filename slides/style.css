@@ -86,6 +86,10 @@
   border-left: 0.3rem solid #A90936;
 }
 
+.reveal .mvp-muted {
+  color: #777;
+}
+
 .reveal .mvp-compare .mvp-muted,
 .reveal .mvp-compare .mvp-success {
   color: #222;
@@ -310,6 +314,15 @@
 
 .reveal .mvp-contract li {
   margin-bottom: 0.3rem;
+}
+
+.reveal .mvp-contract-lg {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.reveal .mvp-contract-lg li {
+  margin-bottom: 0.6rem;
 }
 
 .reveal section:has(.mvp-contract) blockquote {

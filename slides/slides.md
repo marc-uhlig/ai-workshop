@@ -11,32 +11,43 @@ revealOptions:
 
 # AI Workshop
 
-Von _First-Principle_ zum fertigen MVP
+Vom _First-Principle_ zum fertigen MVP
 
 ---
 
+<!-- markdownlint-disable MD032 MD033 MD034 -->
+
 ## Agenda
 
-1. AI Prinzipien - 15 min
-2. Tools vorstellen - 10 min
-3. Tools installieren - 30 min
-4. Grundlagen eines MVPs - 20 min
+<div class="mvp-compare">
+  <div>
+    <h3>Teil 1</h3>
+    <ol>
+      <li>AI Prinzipien <small>15 min</small></li>
+      <li>Tools vorstellen <small>10 min</small></li>
+      <li>Tools installieren <small>30 min</small></li>
+      <li>Grundlagen eines MVPs <small>20 min</small></li>
+    </ol>
+  </div>
+  <div>
+    <h3>Teil 2</h3>
+    <ol start="5">
+      <li>Vorstellen Beispiel MVP <small>5 min</small></li>
+      <li>Umsetzung des Beispiel-MVPs <small>1:00h</small></li>
+      <li>Wrap-Up <small>10 min</small></li>
+    </ol>
+  </div>
+</div>
 
-Pause
-
-<!-- markdownlint-disable MD029 -->
-
-5. Vorstellen Beispiel MVP - 5 min
-6. Umsetzung eines Beispiel-MVPs - 1:00h
-7. Wrap-Up - 10 min
-
-<!-- markdownlint-enable MD029 -->
+> Dazwischen: Pause.
 
 ---
 
 ## 1. AI Prinzipien
 
-Wie funktioniert das, was wir täglich benutzen?
+<div class="mvp-section-title">
+  <p>Wie funktioniert das,<br>was wir täglich benutzen?</p>
+</div>
 
 ---
 
@@ -48,169 +59,267 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ### Ein Model ist _wie_ eine Funtion
 
-- Text rein, Text raus
-- Was dazwischen passiert, bleibt nach außen eine Black Box
-- Kein Verständnis, keine Absicht dahinter
+<p><strong>Text</strong> &rarr; <strong>[Modell]</strong> &rarr; <strong>Text</strong></p>
+
+<div class="mvp-formula">
+  <small>Black Box</small>
+  <p>Was dazwischen passiert, bleibt nach außen unsichtbar.</p>
+</div>
+
+> Kein Verständnis, keine Absicht dahinter.
 
 ---
 
 ### Zustandslos
 
-- Kein eingebautes Gedächtnis zwischen Aufrufen
-- Jede Anfrage schickt den kompletten Verlauf erneut mit
-- "Memory"-Funktionen simulieren das nur von außen
+<div class="mvp-formula">
+  <small>Jede Anfrage startet bei null</small>
+  <p>Kein eingebautes Gedächtnis zwischen Aufrufen – der komplette Verlauf wird jedes Mal erneut mitgeschickt.</p>
+</div>
+
+> "Memory"-Funktionen simulieren das nur von außen.
 
 ---
 
 ### Nicht deterministisch
 
-- Gleiche Frage → leicht andere Antwort möglich
-- Antwort wird aus einer Wahrscheinlichkeitsverteilung gezogen
-- Halluzination ist kein Bug – gleiche Mechanik wie eine richtige Antwort
+<div class="mvp-formula">
+  <small>Wahrscheinlichkeitsverteilung statt Formel</small>
+  <p>Gleiche Frage &rarr; leicht andere Antwort möglich.</p>
+</div>
+
+> Halluzination ist kein Bug – gleiche Mechanik wie eine richtige Antwort.
 
 ---
 
 ### Woher weiß das Modell etwas?
 
-- **Trainingsdaten** – eingefroren in den Gewichten
-- **Kontext** – alles, was gerade mitgeschickt wird
-- Werkzeuge/MCP sind kein dritter Kanal – sie befüllen nur den Kontext, bevor das Modell aufgerufen wird
+<div class="mvp-compare">
+  <div>
+    <h3>Trainingsdaten</h3>
+    <p>Eingefroren in den Gewichten</p>
+  </div>
+  <div>
+    <h3>Kontext</h3>
+    <p class="mvp-success">Alles, was gerade mitgeschickt wird</p>
+  </div>
+</div>
+
+> Werkzeuge/MCP sind kein dritter Kanal – sie befüllen nur den Kontext.
 
 ---
 
 ### Tokens
 
-- Kein Wort, sondern ein Wortstück
-- Beispiel: <https://platform.openai.com/tokenizer>
-- Grundlage für Kosten, Limits und Geschwindigkeit
+<div class="mvp-formula">
+  <small>Kein Wort, sondern ein Wortstück</small>
+  <p>Grundlage für Kosten, Limits und Geschwindigkeit.</p>
+</div>
+
+Beispiel: <https://platform.openai.com/tokenizer>
 
 ---
 
 ### Konsequenz: Warum Tokens zählen
 
-- Mehr Tokens im Kontext = höhere Kosten und langsamere Antworten
-- Ab einer gewissen Länge leidet oft auch die Antwortqualität
-- Also: Kontext bewusst klein halten, nicht "sicherheitshalber" alles reinpacken
+<div class="mvp-formula">
+  <small>Kontext-Budget ist nicht gratis</small>
+  <p>Mehr Tokens = höhere Kosten, mehr Latenz – und ab einer gewissen Länge oft schlechtere Antwortqualität.</p>
+</div>
+
+> Kontext bewusst klein halten, nicht "sicherheitshalber" alles reinpacken.
 
 ---
 
 ### Der Kontext
 
-- Alles, was das Modell bei einer Anfrage "sieht"
-- System-Prompt, Tool-Beschreibungen, Verlauf, Werkzeug-Ergebnisse
-- Ein gemeinsames, begrenztes Budget
+<div class="mvp-formula">
+  <small>Ein gemeinsames, begrenztes Budget</small>
+  <p>System-Prompt, Tool-Beschreibungen, Verlauf, Werkzeug-Ergebnisse – alles teilt sich denselben Platz.</p>
+</div>
+
+> Alles, was das Modell bei einer Anfrage "sieht".
 
 ---
 
 ### Was ist der "Harness"?
 
-- Die Anwendung rund um das Modell: Claude Code, Codex, ChatGPT, Claude Desktop, ...
-- Sie ruft das Modell auf, verwaltet den Kontext und führt Werkzeuge aus
-- Das Modell selbst "weiß" davon nichts – für das Modell ist alles nur Text im Kontext
+<div class="mvp-formula">
+  <small>Claude Code · Codex · ChatGPT · Claude Desktop · ...</small>
+  <p>Die Anwendung rund um das Modell: ruft es auf, verwaltet den Kontext, führt Werkzeuge aus.</p>
+</div>
+
+> Das Modell selbst "weiß" davon nichts – für das Modell ist alles nur Text im Kontext.
 
 ---
 
 ### Der Agentic Loop
 
-1. Harness schickt Kontext an das Modell
-2. Modell antwortet: Text **oder** Werkzeug-Aufruf
-3. Harness führt den Aufruf aus
-4. Ergebnis kommt zurück in den Kontext
-5. Wiederholen, bis das Modell fertig ist
+<ol class="mvp-contract mvp-contract-lg">
+  <li>Harness schickt Kontext an das Modell</li>
+  <li>Modell antwortet: Text <strong>oder</strong> Werkzeug-Aufruf</li>
+  <li>Harness führt den Aufruf aus</li>
+  <li>Ergebnis kommt zurück in den Kontext</li>
+  <li>Wiederholen, bis das Modell fertig ist</li>
+</ol>
 
 ---
 
 ### Werkzeuge (Tools)
 
-- Das Modell **fordert** eine Aktion nur an
-- Der Harness **führt sie aus** (Datei lesen, Befehl ausführen, ...)
-- Ein Tool ist nur Name + Beschreibung + Schema – als Text im Kontext
+<div class="mvp-compare">
+  <div>
+    <h3>Modell</h3>
+    <p>fordert nur an</p>
+  </div>
+  <div>
+    <h3>Harness</h3>
+    <p class="mvp-success">führt aus (Datei lesen, Befehl ausführen, ...)</p>
+  </div>
+</div>
+
+> Ein Tool ist nur Name + Beschreibung + Schema – als Text im Kontext.
 
 ---
 
 ### MCP – Model Context Protocol
 
-- Standard, um externe Werkzeuge/Daten anzubinden
-- remote oder local Server
-- Harness ist der Client
+<div class="mvp-acronym">
+  <div><strong>M</strong><span>Model</span><small>das LLM</small></div>
+  <div><strong>C</strong><span>Context</span><small>was es sieht</small></div>
+  <div><strong>P</strong><span>Protocol</span><small>gemeinsamer Standard</small></div>
+</div>
+
+> Standard, um externe Werkzeuge/Daten anzubinden – remote oder lokal, der Harness ist der Client.
 
 ---
 
 ### MCP-Server
 
-- Tools – ausführbare Funktionen, die das Modell aufrufen kann (z. B. "GitHub Issue erstellen")
-- Resources – Daten/Inhalte, die der Host referenzieren/lesen kann (z. B. Dateien, DB-Einträge, Docs), adressiert über URIs
-- Prompts – vorgefertigte Prompt-Vorlagen/Workflows, die der Server anbietet
+<div class="mvp-decisions">
+  <div>
+    <h3>Tools</h3>
+    <p>Ausführbare Funktionen<br>z. B. "GitHub Issue erstellen"</p>
+  </div>
+  <div>
+    <h3>Resources</h3>
+    <p>Daten zum Referenzieren<br>Dateien, DB-Einträge, Docs</p>
+  </div>
+  <div>
+    <h3>Prompts</h3>
+    <p>Vorgefertigte Vorlagen<br>und Workflows</p>
+  </div>
+</div>
 
 ---
 
 ### Skills, Plugins, MCP – wer macht was?
 
-- **Skill**: Anleitung, die bei Bedarf nachgeladen wird
-- **MCP**: externe Fähigkeit oder Datenquelle (eigener Server)
-- **Plugin**: Bündel aus beidem – reines Verpackungskonzept des Harnesses
+<div class="mvp-decisions">
+  <div>
+    <h3>Skill</h3>
+    <p>Anleitung, bei Bedarf nachgeladen</p>
+  </div>
+  <div>
+    <h3>MCP</h3>
+    <p>Externe Fähigkeit/Datenquelle<br>(eigener Server)</p>
+  </div>
+  <div>
+    <h3>Plugin</h3>
+    <p>Bündel aus beidem –<br>reines Verpackungskonzept</p>
+  </div>
+</div>
 
 ---
 
 ### Konsequenz: Scope entscheidet
 
-- Jedes Tool eines MCP-Servers kostet Kontext – Name + Beschreibung + Schema, schon bevor man fragt
-- Global installiert = in jeder Session aktiv, egal ob gebraucht
-- Also: Server pro Projekt/Task aktivieren statt alles global anzuschalten
-- Skills sind kostenarm, werden nur geladen wenn gebraucht
+<div class="mvp-compare">
+  <div>
+    <h3>MCP-Server</h3>
+    <p>Jedes Tool kostet Kontext<br>Global = immer aktiv, egal ob gebraucht</p>
+  </div>
+  <div>
+    <h3>Skills</h3>
+    <p class="mvp-success">Kostenarm<br>Werden nur bei Bedarf geladen</p>
+  </div>
+</div>
+
+> Server pro Projekt/Task aktivieren statt alles global anzuschalten.
 
 ---
 
 ### Werkzeug-Ergebnisse sind Daten, keine Befehle
 
-- Alles, was ein Tool zurückgibt, landet im gleichen Kontext
-- Das Modell kann Daten nicht strukturell von echten Anweisungen unterscheiden
-- Wichtig, sobald Werkzeuge/MCP externe oder fremde Inhalte lesen
+<div class="mvp-formula">
+  <small>Alles landet im gleichen Kontext</small>
+  <p>Das Modell kann Daten nicht strukturell von echten Anweisungen unterscheiden.</p>
+</div>
+
+> Wichtig, sobald Werkzeuge/MCP externe oder fremde Inhalte lesen.
 
 ---
 
 ### Konsequenz: Prompt Injection
 
-- Eine Webseite, ein Issue oder eine Datei kann Text enthalten, der wie eine Anweisung aussieht
-- Liest ein Tool das ein, landet es im Kontext und das Modell kann darauf "hören"
-- Also: bei externen/fremden Inhalten besonders vorsichtig mit Tool-Rechten sein
+<div class="mvp-formula">
+  <small>Fremder Inhalt kann wie eine Anweisung aussehen</small>
+  <p>Eine Webseite, ein Issue oder eine Datei – liest ein Tool sie ein, landet der Text im Kontext und das Modell kann darauf "hören".</p>
+</div>
+
+> Bei externen/fremden Inhalten besonders vorsichtig mit Tool-Rechten sein.
 
 ---
 
 ### Bonus: Agenten, die Agenten rufen
 
-- Ein Subagent ist derselbe Loop – nur verschachtelt
-- Eigener, sauberer Kontext, z. B. für Recherche oder Suche
-- Kostet mehr Tokens, spart aber Fokus oder Zeit (parallel)
+<div class="mvp-formula">
+  <small>Derselbe Loop – nur verschachtelt</small>
+  <p>Ein Subagent bekommt einen eigenen, sauberen Kontext, z. B. für Recherche oder Suche.</p>
+</div>
+
+> Kostet mehr Tokens, spart aber Fokus oder Zeit (parallel).
 
 ---
 
 ## 2. Tools vorstellen
 
+<div class="mvp-section-title">
+  <p>Zwei Werkzeuge,<br>die den Unterschied machen</p>
+</div>
+
 ---
 
 ### Context7
 
-- MCP-Server für aktuelle Bibliotheks-/Framework-Doku
-- Verhindert Antworten auf Basis veralteter Trainingsdaten (z. B. alte API-Syntax)
-- Einfach im Prompt anfragen, z. B. "use context7"
+<div class="mvp-formula">
+  <small>MCP-Server für aktuelle Doku</small>
+  <p>Verhindert Antworten auf Basis veralteter Trainingsdaten (z. B. alte API-Syntax).</p>
+</div>
+
+> Einfach im Prompt anfragen, z. B. "use context7".
 
 ---
 
 ### Openspec
 
-- Spec-driven Workflow: erst Spec schreiben, dann Code
-- Scope und Vorgehen liegen vorher schriftlich fest, nicht nur im Kopf des Modells
-- Schützt vor Scope-Wachstum und "stillem" Umplanen mitten in der Umsetzung
+<div class="mvp-formula">
+  <small>Spec-driven Workflow</small>
+  <p>Erst Spec schreiben, dann Code – Scope und Vorgehen liegen vorher schriftlich fest, nicht nur im Kopf des Modells.</p>
+</div>
+
+> Schützt vor Scope-Wachstum und "stillem" Umplanen mitten in der Umsetzung.
 
 ---
 
 ### Openspec – die vier Phasen
 
-1. `explore` – Ist-Zustand verstehen, Optionen abwägen, Anforderungen erarbeiten
-2. `propose` – konkreten Change als Spec vorschlagen
-3. `apply` – Spec Schritt für Schritt umsetzen
-4. `archive` – abgeschlossene Spec archivieren, Doku bleibt erhalten
+<ol class="mvp-contract">
+  <li><code>explore</code> – Ist-Zustand verstehen, Optionen abwägen, Anforderungen erarbeiten</li>
+  <li><code>propose</code> – konkreten Change als Spec vorschlagen</li>
+  <li><code>apply</code> – Spec Schritt für Schritt umsetzen</li>
+  <li><code>archive</code> – abgeschlossene Spec archivieren, Doku bleibt erhalten</li>
+</ol>
 
 ---
 
@@ -270,19 +379,28 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ### Welches Model für welchen Skill
 
-- explore/propose: high effort
-  - Codex: Sol/Terra
-  - Claude: Opus high
-- apply: medium effort
-  - Codex: Terra
-  - Claude: Sonnet high ??
-- archive: medium effort
-  - Codex: Terra
-  - Claude: Sonnet medium
+<div class="mvp-decisions">
+  <div>
+    <h3>explore / propose</h3>
+    <p>high effort<br>Codex: Sol/Terra<br>Claude: Opus high</p>
+  </div>
+  <div>
+    <h3>apply</h3>
+    <p>medium effort<br>Codex: Terra<br>Claude: Sonnet high ??</p>
+  </div>
+  <div>
+    <h3>archive</h3>
+    <p>medium effort<br>Codex: Terra<br>Claude: Sonnet medium</p>
+  </div>
+</div>
 
 ---
 
 ## 3. Tools installieren
+
+<div class="mvp-section-title">
+  <p>Schritt für Schritt<br>startklar machen</p>
+</div>
 
 ---
 
@@ -290,21 +408,23 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ### Context7
 
-- <https://github.com/upstash/context7#installation>
-
----
-
-### ui-ux-pro-max-skill
+<div class="mvp-formula">
+  <small>Installation</small>
+  <p><a href="https://github.com/upstash/context7#installation">github.com/upstash/context7#installation</a></p>
+</div>
 
 ---
 
 ### Openspec
 
+<div class="mvp-formula">
+  <small>Installation</small>
+  <p><a href="https://openspec.dev/docs/installation">openspec.dev/docs/installation</a></p>
+</div>
+
 ---
 
 <!-- markdownlint-enable MD024 -->
-
-<!-- markdownlint-disable MD032 MD033 MD034 -->
 
 ## 4. Grundlagen eines MVPs
 
@@ -653,49 +773,67 @@ Nicht-Ziele sind nicht für jedes MVP der Welt zwingend. Für diesen eintägigen
 - https://github.com/klosebrothers/hackathon/blob/main/prompts/EXISTIERENDEIDEE.md
 </aside>
 
-<!-- markdownlint-enable MD032 MD033 MD034 -->
+---
+
+## Pause
+
+> 10 Minuten
 
 ---
 
 ## 5. Vorstellen Beispiel MVP
 
-- So könnt es aussehen
+<div class="mvp-section-title">
+  <p>So könnte es aussehen</p>
+</div>
 
 ---
 
 ## 6. Umsetzung eines Beispiel-MVPs
 
+<div class="mvp-section-title">
+  <p>Vom Openspec-Workflow<br>zur fertigen Kudos-Card</p>
+</div>
+
 ---
 
 ### Openspec Recap
 
-- `explore`
-- `propose`
-- `apply`
-- `archive`
+<ol class="mvp-contract mvp-contract-lg">
+  <li><code>explore</code></li>
+  <li><code>propose</code></li>
+  <li><code>apply</code></li>
+  <li><code>archive</code></li>
+</ol>
 
 ---
 
-### 1. Kudos-Card generieren
+### Eure Aufgabe: 3 Features
 
-- 1 Theme (beautiful minimalism) mit je 4 Templates
-- Adressat, Empfänger, Headline, Text, Icon
-- Bild anzeigen
-- Bild herunterladen
-- Bild in in Zwischenablage speichern
-
-### 2. Unterstützung mehrerer Themes
-
-- mindestens zwei weitere Themes mit je 4 Templates
-
-### 3. Ascii-Theme (optional)
-
-- erstelle Kudos-Card nur mit Ascii-Zeichen
-- Button zum in die Zwischenablage kopieren
+<div class="mvp-decisions">
+  <div>
+    <h3>1. Kudos-Card generieren</h3>
+    <p>1 Theme mit 4 Templates<br>Adressat, Headline, Text, Icon<br>anzeigen, herunterladen, kopieren</p>
+  </div>
+  <div>
+    <h3>2. Mehrere Themes</h3>
+    <p>Mindestens zwei weitere Themes<br>mit je 4 Templates</p>
+  </div>
+  <div>
+    <h3>3. Ascii-Theme</h3>
+    <p class="mvp-muted">(optional)<br>Nur Ascii-Zeichen<br>Copy-Button</p>
+  </div>
+</div>
 
 ---
 
 ## 7. Wrap-Up
 
-- Was hat euch überrascht?
-- Was nehmt ihr mit für den Hackathon?
+<div class="mvp-compare">
+  <div>
+    <h3>Was hat euch überrascht?</h3>
+  </div>
+  <div>
+    <h3>Was nehmt ihr mit für den Hackathon?</h3>
+  </div>
+</div>
