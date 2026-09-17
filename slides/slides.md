@@ -24,9 +24,13 @@ Von _First-Principle_ zum fertigen MVP
 
 Pause
 
+<!-- markdownlint-disable MD029 -->
+
 5. Vorstellen Beispiel MVP - 5 min
 6. Umsetzung eines Beispiel-MVPs - 1:00h
 7. Wrap-Up - 10 min
+
+<!-- markdownlint-enable MD029 -->
 
 ---
 
@@ -184,21 +188,23 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ---
 
+<!-- markdownlint-disable MD024 -->
+
 ### Context7
 
-- <https://github.com/upstash/context7#installation> 
+- <https://github.com/upstash/context7#installation>
 
 ---
 
 ### ui-ux-pro-max-skill
-
-
 
 ---
 
 ### Openspec
 
 ---
+
+<!-- markdownlint-enable MD024 -->
 
 <!-- markdownlint-disable MD032 MD033 MD034 -->
 
@@ -490,7 +496,6 @@ Frontend fertig, Backend angebunden oder AI funktioniert sind keine guten Fertig
 
 Gute Kriterien kann jemand beobachten und überprüfen: Die Kernreise läuft ohne Eingriff eines Entwicklers. Am Ende ist der versprochene Nutzen sichtbar. Das Projekt lässt sich mit einem dokumentierten Befehl lokal starten. Und der komplette Weg passt in die vierminütige Live-Demo.
 
-
 Deployment selbst gehört ausdrücklich nicht zum Hackathon. Das MVP sollte aber ohne grundlegenden Umbau produktiv deploybar sein. Kleine Ergänzungen sind völlig okay: zum Beispiel Single Sign-On, Secrets, Monitoring oder eine Deployment-Konfiguration. Nicht okay wäre, wenn wir die Kernlogik oder Architektur dafür neu bauen müssten.
 
 Übergang: Diese sechs Fragen halten wir jetzt kurz fest.
@@ -574,16 +579,21 @@ Nicht-Ziele sind nicht für jedes MVP der Welt zwingend. Für diesen eintägigen
 ---
 
 ### 1. Kudos-Card generieren
-  - 1 Theme (beautiful minimalism) mit je 4 Templates
-  - Adressat, Empfänger, Headline, Text, Icon 
-  - Bild anzeigen
-  - Bild herunterladen
-  - Bild in in Zwischenablage speichern
+
+- 1 Theme (beautiful minimalism) mit je 4 Templates
+- Adressat, Empfänger, Headline, Text, Icon
+- Bild anzeigen
+- Bild herunterladen
+- Bild in in Zwischenablage speichern
+
 ### 2. Unterstützung mehrerer Themes
-  - mindestens zwei weitere Themes mit je 4 Templates
+
+- mindestens zwei weitere Themes mit je 4 Templates
+
 ### 3. Ascii-Theme (optional)
-  - erstelle Kudos-Card nur mit Ascii-Zeichen
-  - Button zum in die Zwischenablage kopieren
+
+- erstelle Kudos-Card nur mit Ascii-Zeichen
+- Button zum in die Zwischenablage kopieren
 
 ---
 
