@@ -11,72 +11,22 @@ revealOptions:
 
 # AI Workshop
 
-subtitle
+Von _First-Principle_ zum fertigen MVP
 
 ---
 
 ## Agenda
 
-1. AI Prinzipien - 15 min - @mira
-2. Tools vorstellen - 10 min - @mira
-3. Tools installieren - 30 min - ✅
-4. Grundlagen eines MVPs - 20 min - @daw
+1. AI Prinzipien - 15 min
+2. Tools vorstellen - 10 min
+3. Tools installieren - 30 min
+4. Grundlagen eines MVPs - 20 min
 
 Pause
 
 5. Vorstellen Beispiel MVP - 5 min
-6. Umsetzung eines Beispiel-MVPs - 1:00h - @mira/@daw
-7. Wrap-Up - 10 min - ✅
-
----
-
-## Notes
-
-- Ziel: Wie gehe ich einen MVP an
-- 2. Tools vorstellen - 15 min - @mira
-  - inkl. Beispiel Prompt mit OpenSpec
-- Tools einrichten in:
-  - CLI
-  - Desktop App
-- Plugins/Skills/MCP installieren
-  - Context7
-  - Openspec
-  - ui-ux-pro-max-skill
-  - specialized skills ansprechen
-- Umgang mit Openspec
-- Was ist ein MVP
-  - Grenzen definieren
-  - manuell mocken
-  - wann ist er fertig
-- Praxis: Umsetzen eines Beispiel-MVPs
-- 2er Teams ?
-- Beispiel-MVP:
-  - Kudos-Card Webpage
-  - Plain spin
-    - Kollegen nehmen eigenen Spin
-  - unit tests, e2e tests
-
----
-
-### TODO
-
-- investigate how to generate images programatically
-
-- Claude Desktop @mira
-  - Tools installieren
-- ChatGPT Desktop @daw
-  - Tools installieren
-
-- MVP umsetzen beispielhaft
-
----
-
-#### Image Generation
-
-- Claude Code & Codex können beide SVG's generieren -> gut genug für MVP
-- vielleicht ist das auch ein Learning
-  - -> hängt euch nicht auf an den Bildern
-  - diese kann man später noch ergänzen
+6. Umsetzung eines Beispiel-MVPs - 1:00h
+7. Wrap-Up - 10 min
 
 ---
 
@@ -231,6 +181,22 @@ Wie funktioniert das, was wir täglich benutzen?
 ---
 
 ## 3. Tools installieren
+
+---
+
+### Context7
+
+- <https://github.com/upstash/context7#installation> 
+
+---
+
+### ui-ux-pro-max-skill
+
+
+
+---
+
+### Openspec
 
 ---
 
