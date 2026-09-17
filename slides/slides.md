@@ -209,6 +209,12 @@ Wie funktioniert das, was wir täglich benutzen?
 </div>
 
 <aside class="notes">
+Kernpunkte:
+
+- AI beschleunigt die Umsetzung, löst aber kein Scope-Problem
+- Ziel: eine funktionierende, demonstrierbare Kernreise
+- Deployment ist nicht Teil des MVPs
+
 Wir haben jetzt die Tools gesehen und eingerichtet. Bevor wir damit losbauen, möchte ich kurz über den Zuschnitt sprechen. Denn AI hilft uns dabei, schneller zu bauen. Sie verhindert aber nicht, dass wir das Falsche oder einfach viel zu viel bauen.
 
 Die Frage für die nächsten Minuten ist deshalb: Wie schneiden wir eine Produktidee so klein, dass am Ende des Hackathons eine funktionierende Kernreise steht?
@@ -241,6 +247,12 @@ Es geht hier um eine konkrete Arbeitsweise für diesen Hackathon. Am Ende muss d
 > Ein vollständiger Happy-Path schlägt fünf halbfertige Features.
 
 <aside class="notes">
+Kernpunkte:
+
+- Ein kompletter Happy Path ist wertvoller als viele halbfertige Features
+- Der Beweis zählt, nicht der Funktionsumfang
+- Team „Smart“ kann Nutzen zeigen und Feedback bekommen
+
 Stellt euch zwei Teams vor. Team "Fleißig" hat richtig viel gebaut: Login, Rollen, Datenbank, vielleicht sogar schon ein Dashboard. Alles sieht nach Fortschritt aus. Aber wenn ein Nutzer vor der Anwendung sitzt, kommt er noch nicht von einem Startpunkt zu einem brauchbaren Ergebnis.
 
 Team Smart hat deutlich weniger. Vielleicht gibt es nur einen Testnutzer. Vielleicht sind Daten hardgecoded. Das Design ist noch nicht besonders schön. Aber ein kompletter Weg funktioniert.
@@ -271,6 +283,12 @@ Wir beweisen, dass eine bestimmte Person mit unserer Lösung ein relevantes Erge
 > Die kleinste Lösung, die echten Nutzen beweist.
 
 <aside class="notes">
+Kernpunkte:
+
+- Minimum heißt: nur bauen, was den Beweis ermöglicht
+- Viable heißt: echter Nutzen trotz kleinem Umfang
+- Product heißt: konkretes Problem für eine konkrete Person lösen
+
 Beim MVP schauen viele zuerst auf das M: möglichst klein, möglichst wenig Aufwand. Das ist verständlich, aber allein noch nicht genug. Das verträgt sich gut mit dem agilen Prinzip "Maximizing the work not done".
 
 Minimum heißt: Wir bauen nur das, was wir für den Beweis brauchen.
@@ -304,6 +322,12 @@ Für den Hackathon kommt die wirtschaftliche Seite dazu: Wer ist der Zielkunde? 
 > Welcher Moment **beweist** den Nutzen?
 
 <aside class="notes">
+Kernpunkte:
+
+- Der Wertmoment folgt der Formel Kunde → Aktion → sichtbares Resultat
+- Der Nutzen liegt im Ergebnis, nicht in der verwendeten Technologie
+- Erst den Wertmoment klären, dann Features auswählen
+
 Bevor wir über Screens, Datenbanken oder Frameworks sprechen, sollten wir einen einfachen Satz vervollständigen können: Ein bestimmter Nutzer tut etwas und erhält ein sichtbares Ergebnis.
 
 Für das Beispiel mit der Kudo Card könnte das heißen: Eine Kollegin möchte jemandem Anerkennung geben. Sie erstellt eine persönliche Karte und kann sie direkt teilen.
@@ -347,6 +371,12 @@ Erst wenn der Wertmoment klar ist, sollten wir Features auswählen.
 <aside class="notes">
 Zeit: etwa 3 Minuten.
 
+Kernpunkte:
+
+- Nicht einzelne Schichten, sondern einen durchgängigen Weg bauen
+- Die Kernreise darf einfach sein und maximal fünf Schritte haben
+- Ziel: vom Start bis zum Wertmoment ohne Bruch
+
 Beim horizontalen Schnitt bauen wir Schichten. Wir haben schon ein bisschen UI, ein bisschen API und ein Datenbankschema. Jede Schicht ist vielleicht zu 70 Prozent fertig. Trotzdem kann niemand den ganzen Ablauf nutzen.
 
 Der vertikale Schnitt geht einmal komplett durch das System. Er ist bewusst schmal, aber er reicht vom Start bis zum Ergebnis.
@@ -388,11 +418,19 @@ Ein schmaler Weg, der komplett funktioniert, ist unser Ziel.
 <aside class="notes">
 Zeit: etwa 3 Minuten.
 
+Kernpunkte:
+
+- Den Kernnutzen und technische Risiken bauen
+- Austauschbare Infrastruktur darf simuliert werden
+- Alles ohne Nutzenbeweis konsequent streichen
+
 Für jedes Feature gibt es drei mögliche Entscheidungen. Wir können es bauen, wir können es simulieren oder wir können es streichen.
 
 Bauen sollten wir den Kernnutzen, den USP und eine technisch riskante Stelle, ohne die der Produktbeweis nicht funktioniert.
 
-Simulieren können wir austauschbare Infrastruktur: einen fest hinterlegten Testnutzer statt Login, Beispieldaten statt Importfunktion, einen Stub statt einer externen Integration oder eine manuelle Administration.
+**Simulieren** können wir austauschbare Infrastruktur. Zum Beispiel: Statt eines Logins startet die Demo immer als „Lea aus dem Marketing“. Statt eines Imports liegen drei passende Beispiel-Kudos bereits bereit. Und statt die Teams- oder Slack-Integration wirklich anzubinden, zeigt der Teilen-Button eine Erfolgsmeldung und kopiert den Link in die Zwischenablage.
+
+Auch eine manuelle Administration ist erlaubt: Wenn sich die Liste der Kolleginnen und Kollegen im MVP noch nicht selbst verwalten lässt, hinterlegt das Team sie vor der Demo einmalig in einer Datei oder Datenbank.
 
 Streichen können wir Rollen, Settings, vollständiges Onboarding, Sonderfälle und alles, was nur „wäre cool“ ist.
 
@@ -420,6 +458,12 @@ Infrastruktur dürfen wir simulieren. Den versprochenen Nutzen nicht.
 
 <aside class="notes">
 Zeit: etwa 2 Minuten.
+
+Kernpunkte:
+
+- Fertig-Kriterien müssen beobachtbar und überprüfbar sein
+- Die gesamte Kernreise muss ohne Eingriff funktionieren
+- Produktiv deploybar heißt: kein grundlegender Umbau mehr nötig
 
 Frontend fertig, Backend angebunden oder AI funktioniert sind keine guten Fertig-Kriterien. Das sind technische Tätigkeiten. Sie sagen noch nichts darüber aus, ob der Nutzer sein Ziel erreicht.
 
@@ -453,6 +497,12 @@ Deployment selbst gehört ausdrücklich nicht zum Hackathon. Das MVP sollte aber
 
 <aside class="notes">
 Zeit: etwa 3 Minuten.
+
+Kernpunkte:
+
+- Der MVP-Vertrag klärt Zielkunde, Problem, Wertmoment und Kernreise
+- Fertig-Kriterien machen Erfolg überprüfbar
+- Nicht-Ziele schützen vor Scope-Wachstum
 
 Bevor am Hackathon-Tag gebaut wird, sollten diese sechs Punkte feststehen.
 
