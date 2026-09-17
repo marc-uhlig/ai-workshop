@@ -11,7 +11,11 @@ revealOptions:
 
 # AI Workshop
 
-Vom _First-Principle_ zum fertigen MVP
+Vom _Grundwissen_ zum fertigen MVP
+
+---
+
+Für Nicht-Techniker geeignet.
 
 ---
 
@@ -23,7 +27,7 @@ Vom _First-Principle_ zum fertigen MVP
   <div>
     <h3>Teil 1</h3>
     <ol>
-      <li>AI Prinzipien <small>15 min</small></li>
+      <li>AI Grundwissen <small>15 min</small></li>
       <li>Tools vorstellen <small>10 min</small></li>
       <li>Tools installieren <small>30 min</small></li>
       <li>Grundlagen eines MVPs <small>20 min</small></li>
@@ -43,11 +47,17 @@ Vom _First-Principle_ zum fertigen MVP
 
 ---
 
-## 1. AI Prinzipien
+## 1. AI Grundwissen
 
 <div class="mvp-section-title">
   <p>Wie funktioniert das,<br>was wir täglich benutzen?</p>
 </div>
+
+---
+
+### _Alle_ Akteure im Überblick
+
+![Übersicht: User, Harness, Modell, Tools, MCP, Skills](./img/actors-overview.svg)
 
 ---
 
@@ -65,8 +75,6 @@ Vom _First-Principle_ zum fertigen MVP
   <small>Black Box</small>
   <p>Was dazwischen passiert, bleibt nach außen unsichtbar.</p>
 </div>
-
-> Kein Verständnis, keine Absicht dahinter.
 
 ---
 
@@ -282,6 +290,12 @@ Beispiel: <https://platform.openai.com/tokenizer>
 
 ---
 
+### Recap: _Alle_ Akteure
+
+![Übersicht: User, Harness, Modell, Tools, MCP, Skills](./img/actors-overview.svg)
+
+---
+
 ## 2. Tools vorstellen
 
 <div class="mvp-section-title">
@@ -312,36 +326,96 @@ Beispiel: <https://platform.openai.com/tokenizer>
 
 ---
 
+### Warum Openspec?
+
+<div class="mvp-decisions">
+  <div>
+    <h3>Billig vor teuer</h3>
+    <p>Falsche Spec korrigieren ist günstiger als falschen Code</p>
+  </div>
+  <div>
+    <h3>Kein Scope-Creep</h3>
+    <p>Requirements stehen fest, bevor implementiert wird</p>
+  </div>
+  <div>
+    <h3>Übersteht Kontext-Reset</h3>
+    <p>Spec bleibt, auch wenn Session/Kontext verloren geht</p>
+  </div>
+</div>
+
+---
+
+### Warum Openspec? (2)
+
+<div class="mvp-decisions">
+  <div>
+    <h3>Review vor Code</h3>
+    <p>Die Spec lässt sich absegnen, bevor das Modell loslegt</p>
+  </div>
+  <div>
+    <h3>Nachvollziehbar</h3>
+    <p>Archivierte Specs dokumentieren, was warum geändert wurde</p>
+  </div>
+  <div>
+    <h3>Teamfähig</h3>
+    <p>Alle arbeiten gegen dieselbe Spec, nicht gegen eigene Annahmen</p>
+  </div>
+</div>
+
+---
+
 ### Openspec – die vier Phasen
 
 <ol class="mvp-contract">
   <li><code>explore</code> – Ist-Zustand verstehen, Optionen abwägen, Anforderungen erarbeiten</li>
   <li><code>propose</code> – konkreten Change als Spec vorschlagen</li>
   <li><code>apply</code> – Spec Schritt für Schritt umsetzen</li>
-  <li><code>archive</code> – abgeschlossene Spec archivieren, Doku bleibt erhalten</li>
+  <li><code>archive</code> – abgeschlossene Spec archivieren, in Haupt-Spec mergen</li>
 </ol>
 
 ---
 
-### Explore 1
+### Initialsierung
+
+```sh
+cd mein-neues-repo
+
+openspec init
+```
+
+---
+
+### Initialsierung (2)
+
+![Claude Code openspec init](./img/opsx-init-1.png)
+
+---
+
+### Initialsierung (3)
+
+![Claude Code openspec init](./img/opsx-init-2.png)
+
+---
+
+### Explore
 
 ![Claude Code openspec explore](./img/opsx-explore-1.png)
 
 ---
 
-### Explore 2
+### Explore (2)
 
 ![Claude Code openspec explore](./img/opsx-explore-2.png)
 
 ---
 
-### Propose 1
+### Propose
 
 ![Claude Code openspec propose](./img/opsx-propose.png)
 
 ---
 
-### Propose 2
+### Propose (2)
 
 ![Claude Code openspec specs](./img/opsx-specs.png)
 
@@ -359,19 +433,19 @@ Beispiel: <https://platform.openai.com/tokenizer>
 
 ---
 
-### Archive 1
+### Archive
 
 ![Claude Code openspec archive](./img/opsx-archive-1.png)
 
 ---
 
-### Archive 2
+### Archive (2)
 
 ![Claude Code openspec archive](./img/opsx-archive-2.png)
 
 ---
 
-### Archive 3
+### Archive (3)
 
 ![Claude Code openspec archive](./img/opsx-archive-3.png)
 
