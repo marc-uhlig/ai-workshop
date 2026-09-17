@@ -26,7 +26,7 @@ Pause
 
 5. Vorstellen Beispiel MVP - 5 min
 6. Umsetzung eines Beispiel-MVPs - 1:00h - @mira/@daw
-7. Fragen - 10 min - ✅
+7. Wrap-Up - 10 min - ✅
 
 ---
 
@@ -77,20 +77,6 @@ Pause
 - vielleicht ist das auch ein Learning
   - -> hängt euch nicht auf an den Bildern
   - diese kann man später noch ergänzen
-
----
-
-### MVP Features
-
-1. Kudos-Card generieren
-  - Text eingeben, 1 Theme, 4 Templates, Bild anzeigen
-  - Bild herunterladen
-  - Bild in in Zwischenablage speichern
-2. Unterstützung mehrerer Themes
-  - mindestens zwei Themes mit je 4 Templates
-3. Ascii-Theme (optional)
-  - erstelle Kudos-Card nur mit Ascii-Zeichen
-  - button zum in die Zwischenablage kopieren
 
 ---
 
@@ -216,7 +202,21 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ## 2. Tools vorstellen
 
-### Welches Model für welchen Skill
+---
+
+### Context7
+
+---
+
+### ui-ux-pro-max-skill
+
+---
+
+### Openspec
+
+---
+
+#### Welches Model für welchen Skill
 
 - explore/propose: high effort
   - Codex: Sol/Terra
@@ -511,12 +511,39 @@ Nicht-Ziele sind nicht für jedes MVP der Welt zwingend. Für diesen eintägigen
 
 ## 5. Vorstellen Beispiel MVP
 
+- So könnt es aussehen
+
 ---
 
 ## 6. Umsetzung eines Beispiel-MVPs
 
 ---
 
-## 7. Fragen
+### Openspec Recap
 
+- `explore`
+- `propose`
+- `apply`
+- `archive`
+
+---
+
+### 1. Kudos-Card generieren
+  - 1 Theme (beautiful minimalism) mit je 4 Templates
+  - Adressat, Empfänger, Headline, Text, Icon 
+  - Bild anzeigen
+  - Bild herunterladen
+  - Bild in in Zwischenablage speichern
+### 2. Unterstützung mehrerer Themes
+  - mindestens zwei weitere Themes mit je 4 Templates
+### 3. Ascii-Theme (optional)
+  - erstelle Kudos-Card nur mit Ascii-Zeichen
+  - Button zum in die Zwischenablage kopieren
+
+---
+
+## 7. Wrap-Up
+
+- Was hat euch überrascht?
+- Was nehmt ihr mit für den Hackathon?
 
