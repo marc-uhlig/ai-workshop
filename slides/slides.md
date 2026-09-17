@@ -209,11 +209,12 @@ Wie funktioniert das, was wir täglich benutzen?
 </div>
 
 <aside class="notes">
-Kernpunkte:
+Stichpunkte zum Scannen:
 
-- AI beschleunigt die Umsetzung, löst aber kein Scope-Problem
-- Ziel: eine funktionierende, demonstrierbare Kernreise
-- Deployment ist nicht Teil des MVPs
+- Tools sind bereit, jetzt geht es um den richtigen Zuschnitt
+- Leitfrage: Idee bis zu einer funktionierenden Kernreise verkleinern
+- Rahmen: lokal lauffähig und live demonstrierbar, kein Deployment
+- Übergang: zwei mögliche Hackathon-Ergebnisse vergleichen
 
 Wir haben jetzt die Tools gesehen und eingerichtet. Bevor wir damit losbauen, möchte ich kurz über den Zuschnitt sprechen. Denn AI hilft uns dabei, schneller zu bauen. Sie verhindert aber nicht, dass wir das Falsche oder einfach viel zu viel bauen.
 
@@ -247,11 +248,14 @@ Es geht hier um eine konkrete Arbeitsweise für diesen Hackathon. Am Ende muss d
 > Ein vollständiger Happy-Path schlägt fünf halbfertige Features.
 
 <aside class="notes">
-Kernpunkte:
+Stichpunkte zum Scannen:
 
-- Ein kompletter Happy Path ist wertvoller als viele halbfertige Features
-- Der Beweis zählt, nicht der Funktionsumfang
-- Team „Smart“ kann Nutzen zeigen und Feedback bekommen
+- Team „Fleißig“: viele Bausteine, aber kein Weg zum Ergebnis
+- Team „Smart“: wenig Umfang, aber ein vollständiger Ablauf
+- Für den Hackathon gewinnt Team „Smart“
+- Nutzen zeigen, Nutzer testen lassen, Produkt-Feedback bekommen
+- MVP als Beweis: eine Person erreicht ein relevantes Ergebnis
+- Übergang: alle drei Buchstaben von MVP müssen stimmen
 
 Stellt euch zwei Teams vor. Team "Fleißig" hat richtig viel gebaut: Login, Rollen, Datenbank, vielleicht sogar schon ein Dashboard. Alles sieht nach Fortschritt aus. Aber wenn ein Nutzer vor der Anwendung sitzt, kommt er noch nicht von einem Startpunkt zu einem brauchbaren Ergebnis.
 
@@ -283,11 +287,15 @@ Wir beweisen, dass eine bestimmte Person mit unserer Lösung ein relevantes Erge
 > Die kleinste Lösung, die echten Nutzen beweist.
 
 <aside class="notes">
-Kernpunkte:
+Stichpunkte zum Scannen:
 
-- Minimum heißt: nur bauen, was den Beweis ermöglicht
-- Viable heißt: echter Nutzen trotz kleinem Umfang
-- Product heißt: konkretes Problem für eine konkrete Person lösen
+- Nicht nur klein bauen: „M“ allein reicht nicht
+- Minimum: nur, was der Beweis braucht
+- Viable: echter Nutzen trotz kleinem Umfang
+- Product: konkretes Problem für eine konkrete Person lösen
+- Chat, API oder Dashboard allein sind noch kein Produkt
+- Wirtschaftliche Seite: Zielkunde, Zahlungsbereitschaft, Einnahmekanal
+- Übergang: zuerst den Wertmoment bestimmen
 
 Beim MVP schauen viele zuerst auf das M: möglichst klein, möglichst wenig Aufwand. Das ist verständlich, aber allein noch nicht genug. Das verträgt sich gut mit dem agilen Prinzip "Maximizing the work not done".
 
@@ -322,11 +330,14 @@ Für den Hackathon kommt die wirtschaftliche Seite dazu: Wer ist der Zielkunde? 
 > Welcher Moment **beweist** den Nutzen?
 
 <aside class="notes">
-Kernpunkte:
+Stichpunkte zum Scannen:
 
-- Der Wertmoment folgt der Formel Kunde → Aktion → sichtbares Resultat
-- Der Nutzen liegt im Ergebnis, nicht in der verwendeten Technologie
-- Erst den Wertmoment klären, dann Features auswählen
+- Formel: Nutzer tut etwas und erhält ein sichtbares Ergebnis
+- Kudos-Beispiel: Karte erstellen und direkt teilen
+- Wert liegt in der fertigen Karte, nicht in Website oder AI
+- Leitfragen: Was besitzt der Nutzer neu, was macht Nutzen sofort sichtbar?
+- Erst danach Features auswählen
+- Übergang: kleinsten Weg bis zum Wertmoment bauen
 
 Bevor wir über Screens, Datenbanken oder Frameworks sprechen, sollten wir einen einfachen Satz vervollständigen können: Ein bestimmter Nutzer tut etwas und erhält ein sichtbares Ergebnis.
 
@@ -371,11 +382,14 @@ Erst wenn der Wertmoment klar ist, sollten wir Features auswählen.
 <aside class="notes">
 Zeit: etwa 3 Minuten.
 
-Kernpunkte:
+Stichpunkte zum Scannen:
 
-- Nicht einzelne Schichten, sondern einen durchgängigen Weg bauen
-- Die Kernreise darf einfach sein und maximal fünf Schritte haben
-- Ziel: vom Start bis zum Wertmoment ohne Bruch
+- Horizontal: UI, API und Datenbank angefangen, aber kein Ablauf nutzbar
+- Vertikal: ein schmaler, kompletter Weg vom Start zum Ergebnis
+- Vereinfachen: ein Nutzer, Happy Path, vorbereitete Daten, eine Funktion
+- Kernreise maximal fünf Schritte und in vier Minuten demonstrierbar
+- Ziel: ein schmaler Weg, der vollständig funktioniert
+- Übergang: bauen, simulieren oder streichen entscheiden
 
 Beim horizontalen Schnitt bauen wir Schichten. Wir haben schon ein bisschen UI, ein bisschen API und ein Datenbankschema. Jede Schicht ist vielleicht zu 70 Prozent fertig. Trotzdem kann niemand den ganzen Ablauf nutzen.
 
@@ -418,11 +432,16 @@ Ein schmaler Weg, der komplett funktioniert, ist unser Ziel.
 <aside class="notes">
 Zeit: etwa 3 Minuten.
 
-Kernpunkte:
+Stichpunkte zum Scannen:
 
-- Den Kernnutzen und technische Risiken bauen
-- Austauschbare Infrastruktur darf simuliert werden
-- Alles ohne Nutzenbeweis konsequent streichen
+- Jedes Feature: bauen, simulieren oder streichen
+- Bauen: Kernnutzen, USP und technisch riskante Stelle
+- Simulieren: Testnutzer, Beispieldaten, gemocktes Teilen
+- Manuelle Administration hinterlegen statt Verwaltungsoberfläche bauen
+- Streichen: Rollen, Settings, Onboarding und Sonderfälle
+- Manuelle Schritte sind okay, wenn sie offen benannt werden
+- Infrastruktur simulieren, den versprochenen Nutzen niemals vortäuschen
+- Übergang: klare Fertig-Kriterien festlegen
 
 Für jedes Feature gibt es drei mögliche Entscheidungen. Wir können es bauen, wir können es simulieren oder wir können es streichen.
 
@@ -459,21 +478,22 @@ Infrastruktur dürfen wir simulieren. Den versprochenen Nutzen nicht.
 <aside class="notes">
 Zeit: etwa 2 Minuten.
 
-Kernpunkte:
+Stichpunkte zum Scannen:
 
-- Fertig-Kriterien müssen beobachtbar und überprüfbar sein
-- Die gesamte Kernreise muss ohne Eingriff funktionieren
-- Produktiv deploybar heißt: kein grundlegender Umbau mehr nötig
+- Technische Tätigkeiten sind keine Fertig-Kriterien
+- Beobachtbar: Kernreise läuft selbstständig, Nutzen sichtbar, lokal startbar, Demo passt
+- Drei bis fünf Kriterien reichen, wenn sie eindeutig sind
+- Produktiv deploybar ohne Umbau, kleine Ergänzungen bleiben erlaubt
+- Übergang: diese Entscheidungen im MVP-Vertrag festhalten
 
 Frontend fertig, Backend angebunden oder AI funktioniert sind keine guten Fertig-Kriterien. Das sind technische Tätigkeiten. Sie sagen noch nichts darüber aus, ob der Nutzer sein Ziel erreicht.
 
 Gute Kriterien kann jemand beobachten und überprüfen: Die Kernreise läuft ohne Eingriff eines Entwicklers. Am Ende ist der versprochene Nutzen sichtbar. Das Projekt lässt sich mit einem dokumentierten Befehl lokal starten. Und der komplette Weg passt in die vierminütige Live-Demo.
 
-Für die Einreichung reichen drei bis fünf solcher Kriterien. Wichtig ist, dass am Ende kein Interpretationsspielraum bleibt.
 
 Deployment selbst gehört ausdrücklich nicht zum Hackathon. Das MVP sollte aber ohne grundlegenden Umbau produktiv deploybar sein. Kleine Ergänzungen sind völlig okay: zum Beispiel Single Sign-On, Secrets, Monitoring oder eine Deployment-Konfiguration. Nicht okay wäre, wenn wir die Kernlogik oder Architektur dafür neu bauen müssten.
 
-Übergang: Diese Entscheidungen können wir jetzt in einem kleinen Vertrag festhalten.
+Übergang: Diese sechs Fragen halten wir jetzt kurz fest.
 
 [Sources]
 - https://klosebrothers.atlassian.net/wiki/spaces/KB/pages/2993422337/Hackathon
@@ -482,43 +502,48 @@ Deployment selbst gehört ausdrücklich nicht zum Hackathon. Das MVP sollte aber
 
 ---
 
-## Schließt einen MVP-Vertrag
+## Sechs Fragen vor der ersten Code-Zeile
 
 <ol class="mvp-contract">
-  <li>Zielkunde</li>
-  <li>Problem</li>
-  <li>Wertmoment</li>
-  <li>Kernreise</li>
-  <li>Fertig-Kriterien</li>
-  <li>Nicht-Ziele</li>
+  <li>Für wen bauen wir?</li>
+  <li>Welches Problem lösen wir?</li>
+  <li>Welches Ergebnis beweist den Nutzen?</li>
+  <li>Welche maximal fünf Schritte führen dorthin?</li>
+  <li>Woran erkennen wir, dass das MVP fertig ist?</li>
+  <li>Was bauen wir bewusst nicht?</li>
 </ol>
 
-> Erst schneiden. Dann bauen.
+> Erst klären. Dann bauen.
 
 <aside class="notes">
 Zeit: etwa 3 Minuten.
 
-Kernpunkte:
+Stichpunkte zum Scannen:
 
-- Der MVP-Vertrag klärt Zielkunde, Problem, Wertmoment und Kernreise
-- Fertig-Kriterien machen Erfolg überprüfbar
-- Nicht-Ziele schützen vor Scope-Wachstum
+- Vor dem Bauen müssen sechs Fragen beantwortet sein
+- Zielkunde, Problem, Wertmoment, Kernreise, Fertig-Kriterien, Nicht-Ziele
+- Unklare Idee zuerst weiter verkleinern
+- Reihenfolge: erst klären, dann bauen
+- Antworten als Grundlage für Spec, Scope-Schutz und Live-Demo
+- Fertig-Kriterien beschreiben überprüfbare Ergebnisse, keine Tätigkeiten
+- Nicht-Ziele verhindern Scope-Wachstum und gehören in die Einreichung
+- Übergang: die sechs Fragen am Beispiel ansehen
 
-Bevor am Hackathon-Tag gebaut wird, sollten diese sechs Punkte feststehen.
+Bevor am Hackathon-Tag gebaut wird, sollten diese sechs Fragen beantwortet sein.
 
 Erstens: Für welchen Zielkunden bauen wir? Zweitens: Welche konkrete Problemsituation verbessern wir? Drittens: Welches sichtbare Ergebnis beweist den Nutzen? Viertens: Welche maximal fünf Schritte führen dorthin? Fünftens: Woran erkennen wir objektiv, dass das MVP funktioniert? Sechstens: Was lassen wir bewusst weg?
 
-Wenn einer dieser Punkte unklar ist, sollten wir nicht einfach anfangen und hoffen, dass er sich beim Coden ergibt. Dann schneiden wir die Idee zuerst nochmal kleiner.
+Wenn eine dieser Fragen unklar ist, sollten wir nicht einfach anfangen und hoffen, dass sie sich beim Coden ergibt. Dann schneiden wir die Idee zuerst nochmal kleiner.
 
 Erst schneiden. Dann bauen.
 
-Der MVP-Vertrag ist anschließend die Grundlage für die Spec, schützt vor spontanem Scope-Wachstum und gibt uns die Struktur für die Live-Demo.
+Die Antworten auf diese sechs Fragen sind anschließend die Grundlage für die Spec, schützen vor spontanem Scope-Wachstum und geben uns die Struktur für die Live-Demo.
 
 Die Fertig-Kriterien beschreiben überprüfbare Ergebnisse, keine erledigten technischen Aufgaben. Zum Beispiel: Eine Kudos-Karte lässt sich aus drei Stichpunkten erzeugen, bearbeiten und teilen. „Frontend fertig“ wäre dagegen kein gutes Kriterium.
 
 Nicht-Ziele sind nicht für jedes MVP der Welt zwingend. Für diesen eintägigen Hackathon würde ich sie aber verbindlich machen. Sie verhindern, dass Login, Rollen, Analytics oder weitere Sonderfälle am Hackathon-Tag wieder in den Scope rutschen. Außerdem verlangt die Einreichungsvorlage ausdrücklich drei bis fünf Punkte, die nicht Bestandteil des MVPs sind.
 
-Übergang zu Teil 5: Genug Theorie. Schauen wir uns jetzt an, wie dieser Vertrag für unser Beispiel-MVP aussieht.
+Übergang zu Teil 5: Genug Theorie. Schauen wir uns jetzt an, wie diese sechs Fragen für unser Beispiel-MVP aussehen.
 
 [Sources]
 - https://github.com/klosebrothers/hackathon/blob/main/templates/IDEENEINREICHUNG.md
