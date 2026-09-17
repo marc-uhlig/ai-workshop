@@ -209,13 +209,11 @@ Wie funktioniert das, was wir täglich benutzen?
 </div>
 
 <aside class="notes">
-Zeit: etwa 1 Minute.
-
 Wir haben jetzt die Tools gesehen und eingerichtet. Bevor wir damit losbauen, möchte ich kurz über den Zuschnitt sprechen. Denn AI hilft uns dabei, schneller zu bauen. Sie verhindert aber nicht, dass wir das Falsche oder einfach viel zu viel bauen.
 
-Die Frage für die nächsten 20 Minuten ist deshalb: Wie schneiden wir eine Produktidee so klein, dass am Ende des Hackathons eine funktionierende Kernreise steht?
+Die Frage für die nächsten Minuten ist deshalb: Wie schneiden wir eine Produktidee so klein, dass am Ende des Hackathons eine funktionierende Kernreise steht?
 
-Es geht hier nicht um eine allgemeine Product-Management-Schulung. Es geht um eine konkrete Arbeitsweise für diesen Hackathon. Am Ende muss das Produkt lokal laufen und live demonstrierbar sein. Deployment gehört nicht zum MVP.
+Es geht hier um eine konkrete Arbeitsweise für diesen Hackathon. Am Ende muss das Produkt lokal laufen und live demonstrierbar sein. Deployment gehört nicht zum MVP.
 
 Übergang: Schauen wir uns dafür erst mal zwei mögliche Hackathon-Ergebnisse an.
 
@@ -229,31 +227,30 @@ Es geht hier nicht um eine allgemeine Product-Management-Schulung. Es geht um ei
 
 <div class="mvp-compare">
   <div>
-    <h3>Team A</h3>
+    <h3>Team "Fleißig"</h3>
     <p>Viele Bausteine</p>
     <p class="mvp-muted">Kein kompletter Weg</p>
   </div>
   <div>
-    <h3>Team B</h3>
+    <h3>Team "Smart"</h3>
     <p>Ein Happy Path</p>
     <p class="mvp-success">Nutzen sichtbar</p>
   </div>
 </div>
 
-> Ein kompletter Weg schlägt fünf halbfertige Features.
+> Ein vollständiger Happy-Path schlägt fünf halbfertige Features.
 
 <aside class="notes">
-Zeit: etwa 3 Minuten.
+Stellt euch zwei Teams vor. Team "Fleißig" hat richtig viel gebaut: Login, Rollen, Datenbank, vielleicht sogar schon ein Dashboard. Alles sieht nach Fortschritt aus. Aber wenn ein Nutzer vor der Anwendung sitzt, kommt er noch nicht von einem Startpunkt zu einem brauchbaren Ergebnis.
 
-Stellt euch zwei Teams vor. Team A hat richtig viel gebaut: Login, Rollen, Datenbank, vielleicht sogar schon ein Dashboard. Alles sieht nach Fortschritt aus. Aber wenn ein Nutzer vor der Anwendung sitzt, kommt er noch nicht von einem Startpunkt zu einem brauchbaren Ergebnis.
+Team Smart hat deutlich weniger. Vielleicht gibt es nur einen Testnutzer. Vielleicht sind Daten hardgecoded. Das Design ist noch nicht besonders schön. Aber ein kompletter Weg funktioniert.
 
-Team B hat deutlich weniger. Vielleicht gibt es nur einen Testnutzer. Vielleicht sind Daten fest hinterlegt. Das Design ist noch nicht besonders schön. Aber ein kompletter Weg funktioniert.
+Für den Hackathon hat Team "Smart" das bessere MVP.
 
-Für den Hackathon hat Team B das bessere MVP.
+Team "Smart" kann den versprochenen Nutzen zeigen. Ein echter Nutzer könnte den Ablauf testen. Und wir bekommen Feedback zum Produkt, nicht nur zur Technik.
 
-Team B kann den versprochenen Nutzen zeigen. Ein echter Nutzer könnte den Ablauf testen. Und wir bekommen Feedback zum Produkt, nicht nur zur Technik.
-
-Ein MVP ist für mich deshalb kein kleines fertiges Produkt. Es ist ein Beweis. Wir beweisen, dass eine bestimmte Person mit unserer Lösung ein relevantes Ergebnis erreichen kann.
+Ein MVP ist für mich deshalb kein kleines fertiges Produkt. Es ist ein Beweis.
+Wir beweisen, dass eine bestimmte Person mit unserer Lösung ein relevantes Ergebnis erreichen kann.
 
 Übergang: Dafür müssen allerdings alle drei Buchstaben von MVP stimmen.
 
@@ -274,11 +271,13 @@ Ein MVP ist für mich deshalb kein kleines fertiges Produkt. Es ist ein Beweis. 
 > Die kleinste Lösung, die echten Nutzen beweist.
 
 <aside class="notes">
-Zeit: etwa 2 Minuten.
+Beim MVP schauen viele zuerst auf das M: möglichst klein, möglichst wenig Aufwand. Das ist verständlich, aber allein noch nicht genug. Das verträgt sich gut mit dem agilen Prinzip "Maximizing the work not done".
 
-Beim MVP schauen viele zuerst auf das M: möglichst klein, möglichst wenig Aufwand. Das ist verständlich, aber allein noch nicht genug.
+Minimum heißt: Wir bauen nur das, was wir für den Beweis brauchen.
 
-Minimum heißt: Wir bauen nur das, was wir für den Beweis brauchen. Viable heißt: Trotz des kleinen Umfangs entsteht ein echter Nutzen. Product heißt: Dieser Nutzen entsteht für eine konkrete Person mit einem konkreten Problem.
+Viable heißt: Trotz des kleinen Umfangs entsteht ein echter Nutzen.
+
+Product heißt: Dieser Nutzen entsteht für eine konkrete Person mit einem konkreten Problem.
 
 Ein Chatfenster mit einem Modell dahinter ist noch kein Produkt. Eine API ist noch kein Produkt. Auch ein schickes Dashboard ist noch kein Produkt. Das Produkt beginnt dort, wo für jemanden ein Problem besser gelöst wird.
 
@@ -293,25 +292,25 @@ Für den Hackathon kommt die wirtschaftliche Seite dazu: Wer ist der Zielkunde? 
 
 ---
 
-## Beginnt beim Wertmoment
+## Der Wertmoment
+
+<p><strong>[Kunde]</strong> &rarr; <strong>[Aktion]</strong> &rarr; <strong>[sichtbares Resultat]</strong></p>
 
 <div class="mvp-formula">
-  <small>Beispiel: Kudos Card</small>
+  <small>Beispiel: Kudo Card</small>
   <p>Eine Kollegin erstellt aus drei Stichpunkten eine persönliche Kudos-Karte und teilt sie direkt.</p>
 </div>
 
-### Welcher Moment beweist den Nutzen?
+> Welcher Moment **beweist** den Nutzen?
 
 <aside class="notes">
-Zeit: etwa 3 Minuten.
-
 Bevor wir über Screens, Datenbanken oder Frameworks sprechen, sollten wir einen einfachen Satz vervollständigen können: Ein bestimmter Nutzer tut etwas und erhält ein sichtbares Ergebnis.
 
-Für das Beispiel mit der Kudos Card könnte das heißen: Eine Kollegin möchte jemandem Anerkennung geben. Sie erstellt eine persönliche Karte und kann sie direkt teilen.
+Für das Beispiel mit der Kudo Card könnte das heißen: Eine Kollegin möchte jemandem Anerkennung geben. Sie erstellt eine persönliche Karte und kann sie direkt teilen.
 
 Der Wertmoment ist nicht, dass sie die Website geöffnet hat. Er ist auch nicht, dass irgendwo AI verwendet wurde. Der Wertmoment ist die fertige Karte, die sie tatsächlich verschicken kann.
 
-Hilfreiche Fragen: Was sieht oder besitzt der Nutzer am Ende, was er vorher nicht hatte? Welcher Moment macht den Nutzen sofort verständlich? Könnten wir genau diesen Moment in vier Minuten demonstrieren?
+Hilfreiche Fragen: Was sieht oder besitzt der Nutzer am Ende, was er vorher nicht hatte? Welcher Moment macht den Nutzen sofort verständlich?
 
 Erst wenn der Wertmoment klar ist, sollten wir Features auswählen.
 
@@ -324,19 +323,24 @@ Erst wenn der Wertmoment klar ist, sollten wir Features auswählen.
 
 ---
 
-## Schneidet vertikal – bis zum Ergebnis
+## Kernreise bauen, nicht Schichten
 
 <div class="mvp-scope-visual">
   <div class="mvp-scope-option">
-    <h3>Schichten bauen</h3>
+    <h3>Schichten</h3>
     <div class="mvp-layer-stack"><span>UI</span><span>API</span><span>Datenbank</span></div>
     <p>Viel angefangen.<br>Nichts erlebbar.</p>
   </div>
   <div class="mvp-scope-arrow">→</div>
   <div class="mvp-scope-option mvp-scope-option-good">
-    <h3>Kernreise bauen</h3>
-    <div class="mvp-journey-line"><span>Start</span><b>→</b><span>Wertmoment</span></div>
-    <p>Schmal. Aber komplett.</p>
+    <h3>Kernreise</h3>
+    <div class="mvp-vertical-slice">
+      <div class="mvp-slice-start">Start</div>
+      <div class="mvp-slice-down">↓</div>
+      <div class="mvp-slice-bars"><span>UI</span><span>API</span><span>DB</span></div>
+      <div class="mvp-slice-down">↓</div>
+      <div class="mvp-slice-result">Wertmoment</div>
+    </div>
   </div>
 </div>
 
@@ -371,11 +375,11 @@ Ein schmaler Weg, der komplett funktioniert, ist unser Ziel.
   </div>
   <div>
     <h3>Simulieren</h3>
-    <p>Fester Testnutzer<br>Beispieldaten</p>
+    <p>Fester Testnutzer<br>Beispieldaten<br>Externe Integration mocken</p>
   </div>
   <div>
     <h3>Streichen</h3>
-    <p>Rollen &amp; Rechte<br>Admin-Bereich</p>
+    <p>Rollen &amp; Rechte<br>Admin-Bereich<br>Onboarding<br>Sonderfälle</p>
   </div>
 </div>
 
@@ -512,4 +516,3 @@ Nicht-Ziele sind nicht für jedes MVP der Welt zwingend. Für diesen eintägigen
 
 - Was hat euch überrascht?
 - Was nehmt ihr mit für den Hackathon?
-
