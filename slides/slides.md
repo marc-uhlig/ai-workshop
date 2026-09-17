@@ -240,24 +240,42 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ### Apply
 
-![Claude Code openspec propose](./img/opsx-apply.png)
+![Claude Code openspec apply](./img/opsx-apply.png)
 
 ---
 
 ### Tasks
 
-![Claude Code openspec propose](./img/opsx-tasks.png)
+![Claude Code openspec tasks](./img/opsx-tasks.png)
 
 ---
 
-#### Welches Model für welchen Skill
+### Archive 1
+
+![Claude Code openspec archive](./img/opsx-archive-1.png)
+
+---
+
+### Archive 2
+
+![Claude Code openspec archive](./img/opsx-archive-2.png)
+
+---
+
+### Archive 3
+
+![Claude Code openspec archive](./img/opsx-archive-3.png)
+
+---
+
+### Welches Model für welchen Skill
 
 - explore/propose: high effort
   - Codex: Sol/Terra
   - Claude: Opus high
 - apply: medium effort
   - Codex: Terra
-  - Claude: Sonnet medium
+  - Claude: Sonnet high ??
 - archive: medium effort
   - Codex: Terra
   - Claude: Sonnet medium
