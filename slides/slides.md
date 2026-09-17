@@ -40,7 +40,13 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ---
 
-### Ein Modell ist wie eine Funktion
+### Was ist ein Modell
+
+![Anthropic Models](./img/anthropic-models.png)
+
+---
+
+### Ein Model ist _wie_ eine Funtion
 
 - Text rein, Text raus
 - Was dazwischen passiert, bleibt nach außen eine Black Box
@@ -58,8 +64,8 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ### Nicht deterministisch
 
-- Antwort wird aus einer Wahrscheinlichkeitsverteilung gezogen
 - Gleiche Frage → leicht andere Antwort möglich
+- Antwort wird aus einer Wahrscheinlichkeitsverteilung gezogen
 - Halluzination ist kein Bug – gleiche Mechanik wie eine richtige Antwort
 
 ---
@@ -77,6 +83,14 @@ Wie funktioniert das, was wir täglich benutzen?
 - Kein Wort, sondern ein Wortstück
 - Beispiel: <https://platform.openai.com/tokenizer>
 - Grundlage für Kosten, Limits und Geschwindigkeit
+
+---
+
+### Konsequenz: Warum Tokens zählen
+
+- Mehr Tokens im Kontext = höhere Kosten und langsamere Antworten
+- Ab einer gewissen Länge leidet oft auch die Antwortqualität
+- Also: Kontext bewusst klein halten, nicht "sicherheitshalber" alles reinpacken
 
 ---
 
@@ -117,8 +131,16 @@ Wie funktioniert das, was wir täglich benutzen?
 ### MCP – Model Context Protocol
 
 - Standard, um externe Werkzeuge/Daten anzubinden
-- Ein Server funktioniert in jedem Harness (Claude Code, Desktop, ...)
-- "USB-C für Tools": einmal bauen, überall einstecken
+- remote oder local Server
+- Harness ist der Client
+
+---
+
+### MCP-Server
+
+- Tools – ausführbare Funktionen, die das Modell aufrufen kann (z. B. "GitHub Issue erstellen")
+- Resources – Daten/Inhalte, die der Host referenzieren/lesen kann (z. B. Dateien, DB-Einträge, Docs), adressiert über URIs
+- Prompts – vorgefertigte Prompt-Vorlagen/Workflows, die der Server anbietet
 
 ---
 
@@ -130,11 +152,12 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ---
 
-### Vertrauensgrenze: Permission Scope
+### Konsequenz: Scope entscheidet
 
-- Harness entscheidet, was ohne Rückfrage ausgeführt werden darf
-- Freigaben gelten pro Tool, Projekt oder global
-- Deshalb die Bestätigungs-Nachfragen in Claude Code & Co.
+- Jedes Tool eines MCP-Servers kostet Kontext – Name + Beschreibung + Schema, schon bevor man fragt
+- Global installiert = in jeder Session aktiv, egal ob gebraucht
+- Also: Server pro Projekt/Task aktivieren statt alles global anzuschalten
+- Skills sind kostenarm, werden nur geladen wenn gebraucht
 
 ---
 
@@ -143,6 +166,14 @@ Wie funktioniert das, was wir täglich benutzen?
 - Alles, was ein Tool zurückgibt, landet im gleichen Kontext
 - Das Modell kann Daten nicht strukturell von echten Anweisungen unterscheiden
 - Wichtig, sobald Werkzeuge/MCP externe oder fremde Inhalte lesen
+
+---
+
+### Konsequenz: Prompt Injection
+
+- Eine Webseite, ein Issue oder eine Datei kann Text enthalten, der wie eine Anweisung aussieht
+- Liest ein Tool das ein, landet es im Kontext und das Modell kann darauf "hören"
+- Also: bei externen/fremden Inhalten besonders vorsichtig mit Tool-Rechten sein
 
 ---
 
@@ -160,13 +191,62 @@ Wie funktioniert das, was wir täglich benutzen?
 
 ### Context7
 
----
-
-### ui-ux-pro-max-skill
+- MCP-Server für aktuelle Bibliotheks-/Framework-Doku
+- Verhindert Antworten auf Basis veralteter Trainingsdaten (z. B. alte API-Syntax)
+- Einfach im Prompt anfragen, z. B. "use context7"
 
 ---
 
 ### Openspec
+
+- Spec-driven Workflow: erst Spec schreiben, dann Code
+- Scope und Vorgehen liegen vorher schriftlich fest, nicht nur im Kopf des Modells
+- Schützt vor Scope-Wachstum und "stillem" Umplanen mitten in der Umsetzung
+
+---
+
+### Openspec – die vier Phasen
+
+1. `explore` – Ist-Zustand verstehen, Optionen abwägen, Anforderungen erarbeiten
+2. `propose` – konkreten Change als Spec vorschlagen
+3. `apply` – Spec Schritt für Schritt umsetzen
+4. `archive` – abgeschlossene Spec archivieren, Doku bleibt erhalten
+
+---
+
+### Explore 1
+
+![Claude Code openspec explore](./img/opsx-explore-1.png)
+
+---
+
+### Explore 2
+
+![Claude Code openspec explore](./img/opsx-explore-2.png)
+
+---
+
+### Propose 1
+
+![Claude Code openspec propose](./img/opsx-propose.png)
+
+---
+
+### Propose 2
+
+![Claude Code openspec specs](./img/opsx-specs.png)
+
+---
+
+### Apply
+
+![Claude Code openspec propose](./img/opsx-apply.png)
+
+---
+
+### Tasks
+
+![Claude Code openspec propose](./img/opsx-tasks.png)
 
 ---
 
