@@ -549,22 +549,23 @@ Es geht hier um eine konkrete Arbeitsweise für diesen Hackathon. Am Ende muss d
 Stichpunkte zum Scannen:
 
 - Team „Fleißig“: viele Bausteine, aber kein Weg zum Ergebnis
+  - Login, Rollen, Datenbank, vielleicht sogar schon ein Dashboard
 - Team „Smart“: wenig Umfang, aber ein vollständiger Ablauf
 - Für den Hackathon gewinnt Team „Smart“
 - Nutzen zeigen, Nutzer testen lassen, Produkt-Feedback bekommen
 - MVP als Beweis: eine Person erreicht ein relevantes Ergebnis
 - Übergang: alle drei Buchstaben von MVP müssen stimmen
 
-Stellt euch zwei Teams vor. Team "Fleißig" hat richtig viel gebaut: Login, Rollen, Datenbank, vielleicht sogar schon ein Dashboard. Alles sieht nach Fortschritt aus. Aber wenn ein Nutzer vor der Anwendung sitzt, kommt er noch nicht von einem Startpunkt zu einem brauchbaren Ergebnis.
+Stellt euch zwei Teams vor. Team "Fleißig" hat richtig viel gebaut: **Login, Rollen, Datenbank, vielleicht sogar schon ein Dashboard**. Alles sieht nach **Fortschritt** aus. Aber wenn ein Nutzer vor der Anwendung sitzt, kommt er noch nicht von einem Startpunkt **zu einem brauchbaren Ergebnis**.
 
-Team Smart hat deutlich weniger. Vielleicht gibt es nur einen Testnutzer. Vielleicht sind Daten hardgecoded. Das Design ist noch nicht besonders schön. Aber ein kompletter Weg funktioniert.
+Team Smart hat deutlich weniger. Vielleicht gibt es **nur einen Testnutzer. Vielleicht sind Daten hardgecoded.** Das **Design ist noch nicht besonders schön**. Aber ein kompletter Weg funktioniert.
 
 Für den Hackathon hat Team "Smart" das bessere MVP.
 
-Team "Smart" kann den versprochenen Nutzen zeigen. Ein echter Nutzer könnte den Ablauf testen. Und wir bekommen Feedback zum Produkt, nicht nur zur Technik.
+Team "Smart" **kann den versprochenen Nutzen** zeigen. Ein echter Nutzer könnte den Ablauf testen. Und wir bekommen **Feedback** zum Produkt, nicht nur zur Technik.
 
-Ein MVP ist für mich deshalb kein kleines fertiges Produkt. Es ist ein Beweis.
-Wir beweisen, dass eine bestimmte Person mit unserer Lösung ein relevantes Ergebnis erreichen kann.
+Ein MVP ist für mich deshalb kein kleines fertiges Produkt. Es ist ein **Beweis**.
+**Wir beweisen, dass eine bestimmte Person mit unserer Lösung ein relevantes Ergebnis erreichen kann.**
 
 Übergang: Dafür müssen allerdings alle drei Buchstaben von MVP stimmen.
 
@@ -587,13 +588,14 @@ Wir beweisen, dass eine bestimmte Person mit unserer Lösung ein relevantes Erge
 <aside class="notes">
 Stichpunkte zum Scannen:
 
-- Nicht nur klein bauen: „M“ allein reicht nicht
+- Möglichst wenig Aufwand. Wir wollen in kürzester Zeit 
 - Minimum: nur, was der Beweis braucht
-- Viable: echter Nutzen trotz kleinem Umfang
+- Nicht nur klein bauen: „M“ allein reicht nicht
+- Viable: Trotz des kleinen Umfangs: echter Nutzen sichtbar
 - Product: konkretes Problem für eine konkrete Person lösen
-- Chat, API oder Dashboard allein sind noch kein Produkt
-- Wirtschaftliche Seite: Zielkunde, Zahlungsbereitschaft, Einnahmekanal
-- Übergang: zuerst den Wertmoment bestimmen
+- Chat mit AI, API oder Dashboard allein sind noch kein Produkt
+- Wirtschaftliche Seite für Hackathon auch wichtig: Zielkunde, Zahlungsbereitschaft, Einnahmekanal
+- Übergang: Warum jemand zahlen sollte: Müssen zuerst den Wertmoment bestimmen
 
 Beim MVP schauen viele zuerst auf das M: möglichst klein, möglichst wenig Aufwand. Das ist verständlich, aber allein noch nicht genug. Das verträgt sich gut mit dem agilen Prinzip "Maximizing the work not done".
 
@@ -630,20 +632,18 @@ Für den Hackathon kommt die wirtschaftliche Seite dazu: Wer ist der Zielkunde? 
 <aside class="notes">
 Stichpunkte zum Scannen:
 
+- Übergang: Bevor wir über Screens, Datenbanken oder Frameworks sprechen
 - Formel: Nutzer tut etwas und erhält ein sichtbares Ergebnis
 - Kudos-Beispiel: Karte erstellen und direkt teilen
-- Wert liegt in der fertigen Karte, nicht in Website oder AI
-- Leitfragen: Was besitzt der Nutzer neu, was macht Nutzen sofort sichtbar?
-- Erst danach Features auswählen
+- Wertmoment liegt nicht in Website oder AI, sondern in der fertigen Karte, 
+- Erst nach dem Wertmoment die Features auswählen
 - Übergang: kleinsten Weg bis zum Wertmoment bauen
 
-Bevor wir über Screens, Datenbanken oder Frameworks sprechen, sollten wir einen einfachen Satz vervollständigen können: Ein bestimmter Nutzer tut etwas und erhält ein sichtbares Ergebnis.
+**Bevor wir über Screens, Datenbanken oder Frameworks sprechen**, sollten wir einen einfachen Satz vervollständigen können: Ein bestimmter Nutzer tut etwas und erhält ein sichtbares Ergebnis.
 
 Für das Beispiel mit der Kudo Card könnte das heißen: Eine Kollegin möchte jemandem Anerkennung geben. Sie erstellt eine persönliche Karte und kann sie direkt teilen.
 
-Der Wertmoment ist nicht, dass sie die Website geöffnet hat. Er ist auch nicht, dass irgendwo AI verwendet wurde. Der Wertmoment ist die fertige Karte, die sie tatsächlich verschicken kann.
-
-Hilfreiche Fragen: Was sieht oder besitzt der Nutzer am Ende, was er vorher nicht hatte? Welcher Moment macht den Nutzen sofort verständlich?
+**Der Wertmoment ist nicht, dass sie die Website geöffnet hat.** Er ist auch nicht, dass irgendwo AI verwendet wurde. Der Wertmoment ist die fertige Karte, die sie tatsächlich verschicken kann.
 
 Erst wenn der Wertmoment klar ist, sollten wir Features auswählen.
 
@@ -682,12 +682,13 @@ Zeit: etwa 3 Minuten.
 
 Stichpunkte zum Scannen:
 
-- Horizontal: UI, API und Datenbank angefangen, aber kein Ablauf nutzbar
+- Übergang: Der schnellste weg ist nicht horizontal
+- Horizontal: UI, API und Datenbank 70% fertig, aber kein Ablauf nutzbar
 - Vertikal: ein schmaler, kompletter Weg vom Start zum Ergebnis
-- Vereinfachen: ein Nutzer, Happy Path, vorbereitete Daten, eine Funktion
+- Kann sehr einfach sein: nur ein Nutzer, nur den Happy Path, mit vorbereiteten Daten, eine Funktionalität
 - Kernreise maximal fünf Schritte und in vier Minuten demonstrierbar
 - Ziel: ein schmaler Weg, der vollständig funktioniert
-- Übergang: bauen, simulieren oder streichen entscheiden
+- Übergang: Wie nimmt man den schmalen Weg? bauen, simulieren oder streichen entscheiden
 
 Beim horizontalen Schnitt bauen wir Schichten. Wir haben schon ein bisschen UI, ein bisschen API und ein Datenbankschema. Jede Schicht ist vielleicht zu 70 Prozent fertig. Trotzdem kann niemand den ganzen Ablauf nutzen.
 
@@ -732,13 +733,14 @@ Zeit: etwa 3 Minuten.
 
 Stichpunkte zum Scannen:
 
+- Übergang: Schmaler weg:
 - Jedes Feature: bauen, simulieren oder streichen
 - Bauen: Kernnutzen, USP und technisch riskante Stelle
-- Simulieren: Testnutzer, Beispieldaten, gemocktes Teilen
+- Simulieren: Testnutzer/Login, Beispieldaten, hardgecodete secrets, gemockte Externe Schnittstellen z.b. in slack Teilen
 - Manuelle Administration hinterlegen statt Verwaltungsoberfläche bauen
 - Streichen: Rollen, Settings, Onboarding und Sonderfälle
-- Manuelle Schritte sind okay, wenn sie offen benannt werden
-- Infrastruktur simulieren, den versprochenen Nutzen niemals vortäuschen
+- Manuelle Schritte sind okay
+- Kernnutzen nicht vortäuschen
 - Übergang: klare Fertig-Kriterien festlegen
 
 Für jedes Feature gibt es drei mögliche Entscheidungen. Wir können es bauen, wir können es simulieren oder wir können es streichen.
@@ -747,7 +749,7 @@ Bauen sollten wir den Kernnutzen, den USP und eine technisch riskante Stelle, oh
 
 **Simulieren** können wir austauschbare Infrastruktur. Zum Beispiel: Statt eines Logins startet die Demo immer als „Lea aus dem Marketing“. Statt eines Imports liegen drei passende Beispiel-Kudos bereits bereit. Und statt die Teams- oder Slack-Integration wirklich anzubinden, zeigt der Teilen-Button eine Erfolgsmeldung und kopiert den Link in die Zwischenablage.
 
-Auch eine manuelle Administration ist erlaubt: Wenn sich die Liste der Kolleginnen und Kollegen im MVP noch nicht selbst verwalten lässt, hinterlegt das Team sie vor der Demo einmalig in einer Datei oder Datenbank.
+Auch eine **manuelle Administration** ist erlaubt: Wenn sich die Liste der Kolleginnen und Kollegen im MVP noch nicht selbst verwalten lässt, hinterlegt das Team sie vor der Demo einmalig in einer Datei oder Datenbank.
 
 Streichen können wir Rollen, Settings, vollständiges Onboarding, Sonderfälle und alles, was nur „wäre cool“ ist.
 
@@ -778,11 +780,12 @@ Zeit: etwa 2 Minuten.
 
 Stichpunkte zum Scannen:
 
-- Technische Tätigkeiten sind keine Fertig-Kriterien
+- **Technische** Tätigkeiten sind **keine** Fertig-Kriterien
 - Beobachtbar: Kernreise läuft selbstständig, Nutzen sichtbar, lokal startbar, Demo passt
 - Drei bis fünf Kriterien reichen, wenn sie eindeutig sind
-- Produktiv deploybar ohne Umbau, kleine Ergänzungen bleiben erlaubt
-- Übergang: diese Entscheidungen im MVP-Vertrag festhalten
+- Produktiv deploybar (nicht eigentliches deployment) ohne Umbau, kleine Ergänzungen bleiben erlaubt
+- Kann nachgeholt werden: zum Beispiel Single Sign-On, Secrets, Monitoring oder eine Deployment-Konfiguration.
+- Übergang: Sechs fragen, bevor wir anfangen auch nur an Code zu denken
 
 Frontend fertig, Backend angebunden oder AI funktioniert sind keine guten Fertig-Kriterien. Das sind technische Tätigkeiten. Sie sagen noch nichts darüber aus, ob der Nutzer sein Ziel erreicht.
 
