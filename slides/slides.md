@@ -27,10 +27,10 @@ Für Nicht-Techniker geeignet.
   <div>
     <h3>Teil 1</h3>
     <ol>
-      <li>AI Grundwissen <small>15 min</small></li>
+      <li>AI Grundwissen <small>20 min</small></li>
       <li>Tools vorstellen <small>10 min</small></li>
       <li>Tools installieren <small>30 min</small></li>
-      <li>Grundlagen eines MVPs <small>20 min</small></li>
+      <li>Grundlagen eines MVPs <small>15 min</small></li>
     </ol>
   </div>
   <div>
